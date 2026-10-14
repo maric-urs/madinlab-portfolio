@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orizon — portail intranet | Madinlab</title>
+    <meta
+      name="description"
+      content="Étude de cas Orizon : plateforme collaborative open source (Nuxt 4, Keycloak, Appwrite) — communication interne, annuaire et gestion documentaire."
+    />
+    <link rel="icon" href="/logo-nav.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="case-page" data-i18n-page="orizon">
+    <header class="top top--case">
+      <div class="lang-switch" role="group" data-i18n-attr="aria-label:nav.lang">
+        <button type="button" class="lang-switch__btn is-active" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="lang-switch__btn" data-lang="es" aria-pressed="false">ESP</button>
+      </div>
+      <div class="top__actions">
+        <a class="pill pill--light case-page__back" href="/#work" data-i18n="orizon.nav.back">← Réalisations</a>
+        <a class="pill pill--blue" href="/#contact" data-i18n="nav.quote">Devis</a>
+      </div>
+    </header>
+
+    <main class="case-study">
+      <div class="case-study__hero ambient-bg flat-wash flat-wash--dark">
+        <p class="tag" data-i18n="orizon.tag">[ Étude de cas ]</p>
+        <h1 class="case-study__title" data-i18n="orizon.h1">Orizon</h1>
+        <p class="case-study__lead" data-i18n="orizon.lead">
+          Plateforme collaborative open source pour centraliser la communication interne et remplacer les serveurs de
+          fichiers par une interface web moderne, rapide et sécurisée.
+        </p>
+        <p class="case-study__badge" data-i18n="orizon.badge">Logiciel métier · déploiement on-premise</p>
+        <figure class="case-study__cover">
+          <img
+            src="/projects/orizon/01.jpg"
+            alt="Interface Orizon — capture"
+            data-i18n-attr="alt:orizon.gallery.alt"
+            width="1600"
+            height="900"
+            loading="eager"
+            decoding="async"
+          />
+        </figure>
+      </div>
+
+      <div class="case-study__body">
+        <section class="case-study__block">
+          <h2 data-i18n="orizon.context.title">Le besoin</h2>
+          <p data-i18n="orizon.context.body">
+            Une organisation qui veut un intranet unifié : actualités par service, annuaire des agents, liens vers les
+            applications métier et administration sans multiplier les outils. Tout est développé from scratch, sans
+            modèle tout fait.
+          </p>
+        </section>
+
+        <section class="case-study__block">
+          <h2 data-i18n="orizon.stack.title">Stack technique</h2>
+          <ul class="case-study__stack">
+            <li data-i18n="orizon.stack.nuxt">Nuxt 4 · Vue 3 · Pinia</li>
+            <li data-i18n="orizon.stack.ui">Tailwind · shadcn-nuxt</li>
+            <li data-i18n="orizon.stack.auth">Keycloak (SSO · LDAP/AD)</li>
+            <li data-i18n="orizon.stack.data">Appwrite · Redis · API Nitro</li>
+          </ul>
+        </section>
+
+        <section class="case-study__block">
+          <h2 data-i18n="orizon.features.title">Fonctionnalités livrées</h2>
+          <ul class="case-study__list">
+            <li data-i18n="orizon.f1">Tableau de bord personnalisé (widgets actualités, annuaire, apps, nouveaux arrivants).</li>
+            <li data-i18n="orizon.f2">Module actualités avec éditeur riche et droits par service.</li>
+            <li data-i18n="orizon.f3">Annuaire agents alimenté par API métier, avec cache Redis pour la résilience.</li>
+            <li data-i18n="orizon.f4">Catalogue d’applications filtré par groupes LDAP.</li>
+            <li data-i18n="orizon.f5">Espace admin (CRUD, médias, santé API).</li>
+            <li data-i18n="orizon.f6">Mode sombre persistant et interface responsive.</li>
+          </ul>
+        </section>
+
+        <section class="case-study__block">
+          <h2 data-i18n="orizon.gallery.title">Captures d’écran</h2>
+          <div class="case-study__gallery">
+            <figure><img src="/projects/orizon/02.jpg" alt="" data-i18n-attr="alt:orizon.gallery.alt" loading="lazy" decoding="async" /></figure>
+            <figure><img src="/projects/orizon/03.jpg" alt="" data-i18n-attr="alt:orizon.gallery.alt" loading="lazy" decoding="async" /></figure>
+            <figure><img src="/projects/orizon/04.jpg" alt="" data-i18n-attr="alt:orizon.gallery.alt" loading="lazy" decoding="async" /></figure>
+            <figure><img src="/projects/orizon/05.jpg" alt="" data-i18n-attr="alt:orizon.gallery.alt" loading="lazy" decoding="async" /></figure>
+            <figure><img src="/projects/orizon/06.jpg" alt="" data-i18n-attr="alt:orizon.gallery.alt" loading="lazy" decoding="async" /></figure>
+            <figure><img src="/projects/orizon/07.jpg" alt="" data-i18n-attr="alt:orizon.gallery.alt" loading="lazy" decoding="async" /></figure>
+          </div>
+        </section>
+
+        <section class="case-study__cta">
+          <p data-i18n="orizon.cta">Un projet similaire ?</p>
+          <a class="pill pill--blue" href="/#contact" data-i18n="orizon.cta.btn">Demander un devis</a>
+        </section>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <p>Madinlab agency</p>
+      <p data-i18n="foot.region">Antilles et Guyane</p>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

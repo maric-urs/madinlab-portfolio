@@ -34,9 +34,16 @@ function detectLang(): Lang {
 
 export function applyI18n() {
   document.documentElement.lang = currentLang
-  document.title = t('meta.title')
+  const page = document.body.dataset.i18nPage
+  const titleKey =
+    page && messages.fr[`${page}.meta.title`] ? `${page}.meta.title` : 'meta.title'
+  const descKey =
+    page && messages.fr[`${page}.meta.description`]
+      ? `${page}.meta.description`
+      : 'meta.description'
+  document.title = t(titleKey)
   const metaDesc = document.querySelector<HTMLMetaElement>('meta[name="description"]')
-  if (metaDesc) metaDesc.content = t('meta.description')
+  if (metaDesc) metaDesc.content = t(descKey)
 
   document.querySelectorAll<HTMLElement>('[data-i18n]').forEach((el) => {
     const key = el.dataset.i18n
