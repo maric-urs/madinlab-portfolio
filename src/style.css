@@ -1528,44 +1528,52 @@ h2 em { font-style: italic; }
   .lines h3 { font-size: 1.65rem; }
   .faq__title { font-size: clamp(1.65rem, 7vw, 2.2rem); }
 }
-/* —— Étude de cas (Orizon) —— */
-.case-page {
+/* —— Présentation projet (Orizon) —— */
+.project-page {
   background: var(--abyss);
   color: var(--snow);
 }
-.top--case {
+.top--project {
   position: sticky;
   top: 0;
   z-index: 20;
   background: color-mix(in srgb, var(--abyss) 88%, transparent);
   backdrop-filter: blur(10px);
 }
-.case-page__back {
+.project-page__back {
   text-decoration: none;
   font-size: 0.82rem;
   letter-spacing: 0.04em;
 }
-.case-study {
+.project-show {
   padding-bottom: clamp(3rem, 8vw, 5rem);
 }
-.case-study__hero {
-  padding: clamp(2rem, 5vw, 3.5rem) var(--side) clamp(2.5rem, 6vw, 4rem);
+.project-show__shell {
+  box-sizing: content-box;
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.5rem, 5vw, 3rem);
+  padding-right: clamp(1.5rem, 5vw, 3rem);
+}
+.project-show__hero {
+  padding-top: clamp(2rem, 5vw, 3.5rem);
+  padding-bottom: clamp(2.5rem, 6vw, 4rem);
   position: relative;
 }
-.case-study__title {
+.project-show__title {
   margin: 0.5rem 0 0;
   font-size: clamp(2.8rem, 8vw, 4.5rem);
   font-weight: 400;
   line-height: 1.05;
 }
-.case-study__lead {
-  max-width: 42rem;
+.project-show__lead {
   margin: 1.25rem 0 0;
   font-size: clamp(1.02rem, 2vw, 1.2rem);
   line-height: 1.65;
   color: color-mix(in srgb, var(--snow) 82%, transparent);
 }
-.case-study__badge {
+.project-show__badge {
   display: inline-block;
   margin: 1.25rem 0 0;
   padding: 0.35rem 0.75rem;
@@ -1577,45 +1585,50 @@ h2 em { font-style: italic; }
   border: 1px solid color-mix(in srgb, var(--glow-sky) 35%, transparent);
   border-radius: 999px;
 }
-.case-study__cover {
+.project-show__shot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 2.5rem 0 0;
+  padding: clamp(0.75rem, 2vw, 1.25rem);
   line-height: 0;
   border-radius: 0.75rem;
-  overflow: hidden;
   border: 1px solid var(--line);
-  box-shadow: 0 24px 60px color-mix(in srgb, var(--abyss) 40%, transparent);
+  background: color-mix(in srgb, var(--deep-soft) 55%, var(--abyss));
+  box-shadow: 0 20px 48px color-mix(in srgb, var(--abyss) 35%, transparent);
 }
-.case-study__cover img {
+.project-show__shot img {
   display: block;
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: auto;
+  object-fit: contain;
 }
-.case-study__body {
-  max-width: 52rem;
-  margin: 0 auto;
-  padding: 0 var(--side) 2rem;
+.project-show__body {
+  padding-top: clamp(2rem, 5vw, 3rem);
+  padding-bottom: 2rem;
 }
-.case-study__block {
-  padding: 2rem 0 0;
+.project-show__block {
+  padding: 2.25rem 0 0;
   border-top: 1px solid var(--line);
-  margin-top: 2rem;
+  margin-top: 2.25rem;
 }
-.case-study__block:first-child {
+.project-show__block:first-child {
   margin-top: 0;
   border-top: none;
   padding-top: 0;
 }
-.case-study__block h2 {
+.project-show__block h2 {
   margin: 0 0 1rem;
   font-size: clamp(1.35rem, 3vw, 1.75rem);
   font-weight: 600;
 }
-.case-study__block p {
+.project-show__block p {
   margin: 0;
   line-height: 1.65;
   color: color-mix(in srgb, var(--snow) 78%, transparent);
 }
-.case-study__stack {
+.project-show__stack {
   display: flex;
   flex-wrap: wrap;
   gap: 0.65rem;
@@ -1623,7 +1636,7 @@ h2 em { font-style: italic; }
   margin: 0;
   padding: 0;
 }
-.case-study__stack li {
+.project-show__stack li {
   padding: 0.45rem 0.85rem;
   font-size: 0.78rem;
   font-weight: 600;
@@ -1632,53 +1645,39 @@ h2 em { font-style: italic; }
   border-radius: 999px;
   color: color-mix(in srgb, var(--glow-ice) 90%, var(--snow));
 }
-.case-study__list {
+.project-show__list {
   margin: 0;
   padding: 0 0 0 1.15rem;
   line-height: 1.65;
   color: color-mix(in srgb, var(--snow) 78%, transparent);
 }
-.case-study__list li + li {
+.project-show__list li + li {
   margin-top: 0.65rem;
 }
-.case-study__gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 1.25rem;
+.project-show__gallery {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 3vw, 2rem);
+  margin-top: 1.5rem;
 }
-.case-study__gallery figure {
+.project-show__gallery .project-show__shot {
   margin: 0;
-  line-height: 0;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  border: 1px solid var(--line);
 }
-.case-study__gallery img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.case-study__cta {
+.project-show__cta {
   margin-top: 3rem;
-  padding: 2rem;
+  padding: 2rem clamp(1.25rem, 4vw, 2rem);
   text-align: center;
   border: 1px solid var(--line);
   border-radius: 0.75rem;
   background: color-mix(in srgb, var(--deep-soft) 65%, transparent);
 }
-.case-study__cta p {
+.project-show__cta p {
   margin: 0 0 1.25rem;
   font-size: 1.15rem;
 }
-.case-study__cta .pill {
+.project-show__cta .pill {
   display: inline-flex;
   text-decoration: none;
-}
-@media (max-width: 640px) {
-  .case-study__gallery {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
