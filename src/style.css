@@ -1645,6 +1645,11 @@ h2 em { font-style: italic; }
   border-radius: 999px;
   color: color-mix(in srgb, var(--glow-ice) 90%, var(--snow));
 }
+.project-show__features-lead {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  color: color-mix(in srgb, var(--snow) 72%, transparent);
+}
 .project-show__list {
   margin: 0;
   padding: 0 0 0 1.15rem;
@@ -1653,6 +1658,13 @@ h2 em { font-style: italic; }
 }
 .project-show__list li + li {
   margin-top: 0.65rem;
+}
+.project-show__list-more {
+  list-style: none;
+  margin-top: 1rem;
+  padding-left: 0;
+  font-style: italic;
+  color: color-mix(in srgb, var(--glow-sky) 75%, var(--snow));
 }
 .project-show__gallery {
   display: flex;

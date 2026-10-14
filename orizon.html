@@ -6,7 +6,7 @@
     <title>Orizon — portail intranet | Madinlab</title>
     <meta
       name="description"
-      content="Projet Orizon : plateforme collaborative open source (Nuxt 4, Keycloak, Appwrite) — communication interne, annuaire et gestion documentaire."
+      content="Projet Orizon : intranet sur mesure (Nuxt 4, Keycloak, Appwrite) — circuits de validation, formations, formulaires, notifications, GED et espaces collaboratifs."
     />
     <link rel="icon" href="/logo-nav.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,8 +34,8 @@
         <p class="tag" data-i18n="orizon.tag">[ Projet ]</p>
         <h1 class="project-show__title" data-i18n="orizon.h1">Orizon</h1>
         <p class="project-show__lead" data-i18n="orizon.lead">
-          Plateforme collaborative open source pour centraliser la communication interne et remplacer les serveurs de
-          fichiers par une interface web moderne, rapide et sécurisée.
+          Intranet d’entreprise développé from scratch : un seul portail pour communiquer, valider, former, notifier et
+          gérer les documents — avec des droits modulaires par profil et des modules métier activables.
         </p>
         <p class="project-show__badge" data-i18n="orizon.badge">Logiciel métier · déploiement on-premise</p>
         <figure class="project-show__shot">
@@ -53,9 +53,10 @@
         <section class="project-show__block">
           <h2 data-i18n="orizon.context.title">Présentation</h2>
           <p data-i18n="orizon.context.body">
-            Une organisation qui veut un intranet unifié : actualités par service, annuaire des agents, liens vers les
-            applications métier et administration sans multiplier les outils. Tout est développé from scratch, sans
-            modèle tout fait.
+            Orizon regroupe bien plus qu’une vitrine interne : circuits de validation, messagerie instantanée,
+            notifications, formulaires sur mesure, inscriptions aux formations et événements, base documentaire,
+            workspaces métier et organigramme — le tout piloté par une administration centrale et des habilitations
+            fines (LDAP/AD).
           </p>
         </section>
 
@@ -71,13 +72,26 @@
 
         <section class="project-show__block">
           <h2 data-i18n="orizon.features.title">Fonctionnalités</h2>
+          <p class="project-show__features-lead" data-i18n="orizon.features.lead">
+            Exemples de modules livrés dans la plateforme :
+          </p>
           <ul class="project-show__list">
-            <li data-i18n="orizon.f1">Tableau de bord personnalisé (widgets actualités, annuaire, apps, nouveaux arrivants).</li>
-            <li data-i18n="orizon.f2">Module actualités avec éditeur riche et droits par service.</li>
-            <li data-i18n="orizon.f3">Annuaire agents alimenté par API métier, avec cache Redis pour la résilience.</li>
-            <li data-i18n="orizon.f4">Catalogue d’applications filtré par groupes LDAP.</li>
-            <li data-i18n="orizon.f5">Espace admin (CRUD, médias, santé API).</li>
-            <li data-i18n="orizon.f6">Mode sombre persistant et interface responsive.</li>
+            <li data-i18n="orizon.f1">Tableau de bord modulaire (actualités, agenda, annuaire, apps, nouveaux arrivants).</li>
+            <li data-i18n="orizon.f2">Actualités, événements, galeries et mur social interne.</li>
+            <li data-i18n="orizon.f3">Annuaire et organigramme, alimentés par l’API métier avec cache Redis.</li>
+            <li data-i18n="orizon.f4">Circuits de validation configurables et suivi des demandes.</li>
+            <li data-i18n="orizon.f5">Notifications sur les actions et étapes importantes.</li>
+            <li data-i18n="orizon.f6">Messagerie instantanée et échanges dans les espaces collaboratifs.</li>
+            <li data-i18n="orizon.f7">Droits modulaires par profil, service et groupes LDAP/AD.</li>
+            <li data-i18n="orizon.f8">Création de formulaires dynamiques et gestion des réponses.</li>
+            <li data-i18n="orizon.f9">Formations et événements : sessions, inscriptions et suivi des inscrits.</li>
+            <li data-i18n="orizon.f10">Base documentaire (GED), thématiques et pages de contenu.</li>
+            <li data-i18n="orizon.f11">Espaces collaboratifs : fichiers, projets et calendrier partagé.</li>
+            <li data-i18n="orizon.f12">Workspaces métier (bons d’intervention, demandes, modules finance, etc.).</li>
+            <li data-i18n="orizon.f13">Catalogue d’applications et administration (contenus, médias, personnalisation).</li>
+            <li class="project-show__list-more" data-i18n="orizon.f.more">
+              … et d’autres modules activables selon les besoins de l’organisation.
+            </li>
           </ul>
         </section>
 
