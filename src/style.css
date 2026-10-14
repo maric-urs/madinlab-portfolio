@@ -1534,11 +1534,9 @@ h2 em { font-style: italic; }
   color: var(--snow);
 }
 .top--project {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background: color-mix(in srgb, var(--abyss) 88%, transparent);
-  backdrop-filter: blur(10px);
+  /* Même offset que .top (fixed + inset) — ne pas remettre top: 0 en sticky */
+  background: none;
+  backdrop-filter: none;
 }
 .project-page__back {
   text-decoration: none;
@@ -1557,7 +1555,7 @@ h2 em { font-style: italic; }
   padding-right: clamp(1.5rem, 5vw, 3rem);
 }
 .project-show__hero {
-  padding-top: clamp(2rem, 5vw, 3.5rem);
+  padding-top: clamp(4.75rem, 11vw, 6rem);
   padding-bottom: clamp(2.5rem, 6vw, 4rem);
   position: relative;
 }
