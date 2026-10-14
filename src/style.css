@@ -239,11 +239,19 @@ a { color: inherit; }
   object-position: center;
   pointer-events: none;
 }
-.hero__aurora::after {
+.hero__aurora::before {
   content: '';
   position: absolute;
   inset: 0;
   z-index: 1;
+  pointer-events: none;
+  background: color-mix(in srgb, var(--abyss) 36%, transparent);
+}
+.hero__aurora::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
   pointer-events: none;
   background:
     linear-gradient(
