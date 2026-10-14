@@ -699,6 +699,8 @@ h2 em { font-style: italic; }
   margin: 0;
   width: clamp(10rem, 22vw, 13.5rem);
   line-height: 0;
+  background: var(--abyss);
+  isolation: isolate;
 }
 .founder-card__photo {
   display: block;
@@ -706,6 +708,16 @@ h2 em { font-style: italic; }
   height: auto;
   object-fit: contain;
   object-position: top center;
+  /* Fond noir du PNG fusionné avec le fond du site */
+  mix-blend-mode: lighten;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 4%,
+    #000 96%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 4%, #000 96%, transparent 100%);
 }
 .founder-card__body {
   min-width: 0;
