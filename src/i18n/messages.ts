@@ -61,7 +61,8 @@ export const messages: Record<Lang, Record<string, string>> = {
     'metier.1.title': 'Site internet',
     'metier.1.desc': 'Vitrine, saison, bouton d’appel. Lisible en quelques secondes.',
     'metier.2.title': 'Boutique',
-    'metier.2.desc': 'Shopify tenu proprement, ou une vitrine qui mène aux produits.',
+    'metier.2.desc':
+      'Site marchand développé de A à Z : catalogue, Stripe et parcours d’achat sur mesure, sans plateforme clé en main.',
     'metier.3.title': 'Application',
     'metier.3.desc': 'iOS et Android, pour vos clients ou vos équipes. Publication accompagnée, dès 2 399 €.',
     'metier.4.title': 'Logiciel métier',
@@ -226,7 +227,8 @@ export const messages: Record<Lang, Record<string, string>> = {
     'metier.1.title': 'Website',
     'metier.1.desc': 'Showcase, seasonal pages, call button. Clear in seconds.',
     'metier.2.title': 'Store',
-    'metier.2.desc': 'Shopify done right, or a storefront that leads to products.',
+    'metier.2.desc':
+      'Online store built from scratch: custom catalog, Stripe checkout and checkout flow—no off-the-shelf platform.',
     'metier.3.title': 'Mobile app',
     'metier.3.desc': 'iOS and Android for clients or teams. Store publishing included, from €2,399.',
     'metier.4.title': 'Business software',
@@ -388,7 +390,8 @@ export const messages: Record<Lang, Record<string, string>> = {
     'metier.1.title': 'Sitio web',
     'metier.1.desc': 'Vitrina, temporada, botón de llamada. Claro en segundos.',
     'metier.2.title': 'Tienda',
-    'metier.2.desc': 'Shopify bien gestionado, o vitrina que lleva a los productos.',
+    'metier.2.desc':
+      'Tienda desarrollada de cero: catálogo, Stripe y recorrido de compra a medida, sin plataforma prefabricada.',
     'metier.3.title': 'Aplicación',
     'metier.3.desc': 'iOS y Android para clientes o equipos. Publicación acompañada, desde 2 399 €.',
     'metier.4.title': 'Software profesional',

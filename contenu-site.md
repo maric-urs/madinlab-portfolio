@@ -79,7 +79,7 @@
 
 1. **Un concurrent a un site plus propre** — Vous ouvrez sa page sur le téléphone et la vôtre fait vieux à côté. C’est souvent le déclencheur.
 2. **Tout passe par Messenger ou WhatsApp** — Vous perdez du temps à répéter prix et horaires. Il manque une page claire avec un bouton réserver.
-3. **Planity, Wix ou Shopify ne suffit plus** — Vous voulez votre marque, votre parcours client, ou un petit back office sans payer dix abonnements.
+3. **Planity ou Wix ne suffit plus** — Vous voulez votre marque, votre parcours client, ou un petit back office sans payer dix abonnements.
 4. **L’ancien prestataire ne répond plus** — Site bloqué, mot de passe perdu, mise à jour impossible. Il faut reprendre proprement.
 5. **Saison touristique ou nouveau point de vente** — Il faut être visible tout de suite sur Google avec les bons textes et les bonnes photos.
 6. **On vous demande « vous avez un site ? »** — En banque, chez un gros client ou au salon professionnel. La vitrine numérique doit suivre le discours.
@@ -95,7 +95,7 @@
 | Service | Badge | Description |
 |---------|--------|-------------|
 | Site internet | Réservation | Vitrine, réservation en ligne, landing pour une saison. Rapide sur 4G, bouton appel ou WhatsApp visible tout de suite. |
-| E-commerce & boutique | Shopify | Shopify bien configuré ou vitrine qui oriente vers votre boutique. Fiches produits lisibles, tunnel simple. |
+| E-commerce & boutique | From scratch | Site marchand codé sur mesure (Stripe), fiches produits lisibles et tunnel de commande simple. |
 | Application mobile | iOS & Android | Android ou iPhone pour vos clients ou vos équipes. Publication sur les stores accompagnée. |
 | Logiciel métier | Sur mesure | Pointage, planning, dossiers clients. Fini l’Excel partagé et les fichiers qui se perdent. |
 
