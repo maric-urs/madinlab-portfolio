@@ -6,7 +6,7 @@
     <title>Orizon — portail intranet | Madinlab</title>
     <meta
       name="description"
-      content="Projet Orizon : intranet sur mesure (Nuxt 4, Keycloak, Appwrite) — circuits de validation, formations, formulaires, notifications, GED et espaces collaboratifs."
+      content="Projet Orizon : intranet sur mesure — annuaire, organigramme LDAP/RH, GED avancée, gestion de projet, validation et formations."
     />
     <link rel="icon" href="/logo-nav.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -53,10 +53,9 @@
         <section class="project-show__block">
           <h2 data-i18n="orizon.context.title">Présentation</h2>
           <p data-i18n="orizon.context.body">
-            Orizon regroupe bien plus qu’une vitrine interne : circuits de validation, messagerie instantanée,
-            notifications, formulaires sur mesure, inscriptions aux formations et événements, base documentaire,
-            workspaces métier et organigramme — le tout piloté par une administration centrale et des habilitations
-            fines (LDAP/AD).
+            Orizon regroupe bien plus qu’une vitrine interne : annuaire entreprise, organigramme généré depuis LDAP/AD
+            ou un fichier RH, GED avancée, gestion de projet en équipe, circuits de validation, messagerie,
+            notifications, formulaires et inscriptions formations — le tout avec habilitations modulaires.
           </p>
         </section>
 
@@ -78,15 +77,22 @@
           <ul class="project-show__list">
             <li data-i18n="orizon.f1">Tableau de bord modulaire (actualités, agenda, annuaire, apps, nouveaux arrivants).</li>
             <li data-i18n="orizon.f2">Actualités, événements, galeries et mur social interne.</li>
-            <li data-i18n="orizon.f3">Annuaire et organigramme, alimentés par l’API métier avec cache Redis.</li>
+            <li data-i18n="orizon.f3">
+              Annuaire agents (LDAP / API métier, cache Redis) et organigramme généré depuis l’annuaire LDAP ou un import
+              fichier RH.
+            </li>
             <li data-i18n="orizon.f4">Circuits de validation configurables et suivi des demandes.</li>
             <li data-i18n="orizon.f5">Notifications sur les actions et étapes importantes.</li>
             <li data-i18n="orizon.f6">Messagerie instantanée et échanges dans les espaces collaboratifs.</li>
             <li data-i18n="orizon.f7">Droits modulaires par profil, service et groupes LDAP/AD.</li>
             <li data-i18n="orizon.f8">Création de formulaires dynamiques et gestion des réponses.</li>
             <li data-i18n="orizon.f9">Formations et événements : sessions, inscriptions et suivi des inscrits.</li>
-            <li data-i18n="orizon.f10">Base documentaire (GED), thématiques et pages de contenu.</li>
-            <li data-i18n="orizon.f11">Espaces collaboratifs : fichiers, projets et calendrier partagé.</li>
+            <li data-i18n="orizon.f10">
+              GED avancée : espaces documentaires, thématiques, catégories et droits d’accès fins.
+            </li>
+            <li data-i18n="orizon.f11">
+              Gestion de projet : espaces d’équipe, suivi de projets, fichiers partagés et calendrier collaboratif.
+            </li>
             <li data-i18n="orizon.f12">Workspaces métier (bons d’intervention, demandes, modules finance, etc.).</li>
             <li data-i18n="orizon.f13">Catalogue d’applications et administration (contenus, médias, personnalisation).</li>
             <li class="project-show__list-more" data-i18n="orizon.f.more">

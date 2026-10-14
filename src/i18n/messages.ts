@@ -63,7 +63,7 @@ export const messages: Record<Lang, Record<string, string>> = {
     'work.p3.link': 'Voir le projet',
     'orizon.meta.title': 'Orizon — portail intranet | Madinlab',
     'orizon.meta.description':
-      'Projet Orizon : intranet sur mesure (Nuxt 4, Keycloak, Appwrite) — circuits de validation, formations, formulaires, notifications, GED et espaces collaboratifs.',
+      'Projet Orizon : intranet sur mesure — annuaire, organigramme LDAP/RH, GED avancée, gestion de projet, validation et formations.',
     'orizon.nav.back': '← Réalisations',
     'orizon.tag': '[ Projet ]',
     'orizon.h1': 'Orizon',
@@ -72,7 +72,7 @@ export const messages: Record<Lang, Record<string, string>> = {
     'orizon.badge': 'Logiciel métier · déploiement on-premise',
     'orizon.context.title': 'Présentation',
     'orizon.context.body':
-      'Orizon regroupe bien plus qu’une vitrine interne : circuits de validation, messagerie instantanée, notifications, formulaires sur mesure, inscriptions aux formations et événements, base documentaire, workspaces métier et organigramme — le tout piloté par une administration centrale et des habilitations fines (LDAP/AD).',
+      'Orizon regroupe bien plus qu’une vitrine interne : annuaire entreprise, organigramme généré depuis LDAP/AD ou un fichier RH, GED avancée, gestion de projet en équipe, circuits de validation, messagerie, notifications, formulaires et inscriptions formations — le tout avec habilitations modulaires.',
     'orizon.stack.title': 'Stack technique',
     'orizon.stack.nuxt': 'Nuxt 4 · Vue 3 · Pinia',
     'orizon.stack.ui': 'Tailwind · shadcn-nuxt',
@@ -82,15 +82,18 @@ export const messages: Record<Lang, Record<string, string>> = {
     'orizon.features.lead': 'Exemples de modules livrés dans la plateforme :',
     'orizon.f1': 'Tableau de bord modulaire (actualités, agenda, annuaire, apps, nouveaux arrivants).',
     'orizon.f2': 'Actualités, événements, galeries et mur social interne.',
-    'orizon.f3': 'Annuaire et organigramme, alimentés par l’API métier avec cache Redis.',
+    'orizon.f3':
+      'Annuaire agents (LDAP / API métier, cache Redis) et organigramme généré depuis l’annuaire LDAP ou un import fichier RH.',
     'orizon.f4': 'Circuits de validation configurables et suivi des demandes.',
     'orizon.f5': 'Notifications sur les actions et étapes importantes.',
     'orizon.f6': 'Messagerie instantanée et échanges dans les espaces collaboratifs.',
     'orizon.f7': 'Droits modulaires par profil, service et groupes LDAP/AD.',
     'orizon.f8': 'Création de formulaires dynamiques et gestion des réponses.',
     'orizon.f9': 'Formations et événements : sessions, inscriptions et suivi des inscrits.',
-    'orizon.f10': 'Base documentaire (GED), thématiques et pages de contenu.',
-    'orizon.f11': 'Espaces collaboratifs : fichiers, projets et calendrier partagé.',
+    'orizon.f10':
+      'GED avancée : espaces documentaires, thématiques, catégories et droits d’accès fins.',
+    'orizon.f11':
+      'Gestion de projet : espaces d’équipe, suivi de projets, fichiers partagés et calendrier collaboratif.',
     'orizon.f12': 'Workspaces métier (bons d’intervention, demandes, modules finance, etc.).',
     'orizon.f13': 'Catalogue d’applications et administration (contenus, médias, personnalisation).',
     'orizon.f.more': '… et d’autres modules activables selon les besoins de l’organisation.',
@@ -270,7 +273,7 @@ export const messages: Record<Lang, Record<string, string>> = {
     'work.p3.link': 'View project',
     'orizon.meta.title': 'Orizon — intranet portal | Madinlab',
     'orizon.meta.description':
-      'Orizon project: custom intranet (Nuxt 4, Keycloak, Appwrite) — approval workflows, training sign-ups, forms, notifications, DMS and collaborative spaces.',
+      'Orizon project: custom intranet — directory, LDAP/HR org chart, advanced DMS, project management, approvals and training.',
     'orizon.nav.back': '← Work',
     'orizon.tag': '[ Project ]',
     'orizon.h1': 'Orizon',
@@ -279,7 +282,7 @@ export const messages: Record<Lang, Record<string, string>> = {
     'orizon.badge': 'Business software · on-premise',
     'orizon.context.title': 'Overview',
     'orizon.context.body':
-      'Orizon goes far beyond a simple internal homepage: approval circuits, instant messaging, notifications, custom forms, training and event registration, document library, business workspaces and org chart—central admin and fine-grained LDAP/AD access control.',
+      'Orizon goes far beyond a simple internal homepage: company directory, org chart from LDAP/AD or HR file import, advanced DMS, team project management, approval workflows, messaging, notifications, forms and training sign-ups—with modular permissions.',
     'orizon.stack.title': 'Tech stack',
     'orizon.stack.nuxt': 'Nuxt 4 · Vue 3 · Pinia',
     'orizon.stack.ui': 'Tailwind · shadcn-nuxt',
@@ -289,15 +292,18 @@ export const messages: Record<Lang, Record<string, string>> = {
     'orizon.features.lead': 'Sample modules shipped in the platform:',
     'orizon.f1': 'Modular dashboard (news, calendar, directory, apps, new hires).',
     'orizon.f2': 'Internal news, events, galleries and social wall.',
-    'orizon.f3': 'Directory and org chart via business API with Redis cache.',
+    'orizon.f3':
+      'Staff directory (LDAP / business API, Redis cache) and org chart generated from LDAP or HR file import.',
     'orizon.f4': 'Configurable approval workflows and request tracking.',
     'orizon.f5': 'Notifications for key actions and workflow steps.',
     'orizon.f6': 'Instant messaging and chat in collaborative spaces.',
     'orizon.f7': 'Modular permissions by profile, department and LDAP/AD groups.',
     'orizon.f8': 'Dynamic form builder and response management.',
     'orizon.f9': 'Training and events: sessions, sign-ups and attendee tracking.',
-    'orizon.f10': 'Document library (DMS), topics and content pages.',
-    'orizon.f11': 'Collaborative spaces: files, projects and shared calendar.',
+    'orizon.f10':
+      'Advanced DMS: document spaces, topics, categories and fine-grained access rights.',
+    'orizon.f11':
+      'Project management: team spaces, project tracking, shared files and collaborative calendar.',
     'orizon.f12': 'Business workspaces (work orders, requests, finance modules, etc.).',
     'orizon.f13': 'App catalog and admin (content, media, branding).',
     'orizon.f.more': '… plus additional modules enabled per organization.',
@@ -474,7 +480,7 @@ export const messages: Record<Lang, Record<string, string>> = {
     'work.p3.link': 'Ver el proyecto',
     'orizon.meta.title': 'Orizon — portal intranet | Madinlab',
     'orizon.meta.description':
-      'Proyecto Orizon: intranet a medida (Nuxt 4, Keycloak, Appwrite) — circuitos de validación, formación, formularios, notificaciones, GED y espacios colaborativos.',
+      'Proyecto Orizon: intranet a medida — directorio, organigrama LDAP/RRHH, GED avanzada, gestión de proyectos, validación y formación.',
     'orizon.nav.back': '← Proyectos',
     'orizon.tag': '[ Proyecto ]',
     'orizon.h1': 'Orizon',
@@ -483,7 +489,7 @@ export const messages: Record<Lang, Record<string, string>> = {
     'orizon.badge': 'Software profesional · on-premise',
     'orizon.context.title': 'Presentación',
     'orizon.context.body':
-      'Orizon va mucho más allá de una página interna: circuitos de validación, mensajería instantánea, notificaciones, formularios, inscripciones a formaciones y eventos, documentación, workspaces y organigrama — administración central y permisos LDAP/AD.',
+      'Orizon va mucho más allá de una página interna: directorio, organigrama desde LDAP/AD o fichero RRHH, GED avanzada, gestión de proyectos en equipo, validación, mensajería, notificaciones, formularios e inscripciones — permisos modulares.',
     'orizon.stack.title': 'Stack técnico',
     'orizon.stack.nuxt': 'Nuxt 4 · Vue 3 · Pinia',
     'orizon.stack.ui': 'Tailwind · shadcn-nuxt',
@@ -493,15 +499,18 @@ export const messages: Record<Lang, Record<string, string>> = {
     'orizon.features.lead': 'Ejemplos de módulos incluidos en la plataforma:',
     'orizon.f1': 'Panel modular (noticias, agenda, directorio, apps, nuevas incorporaciones).',
     'orizon.f2': 'Noticias, eventos, galerías y muro social interno.',
-    'orizon.f3': 'Directorio y organigrama vía API con caché Redis.',
+    'orizon.f3':
+      'Directorio (LDAP / API, caché Redis) y organigrama generado desde LDAP o importación de fichero RRHH.',
     'orizon.f4': 'Circuitos de validación configurables y seguimiento de solicitudes.',
     'orizon.f5': 'Notificaciones sobre acciones y pasos importantes.',
     'orizon.f6': 'Mensajería instantánea en espacios colaborativos.',
     'orizon.f7': 'Permisos modulares por perfil, servicio y grupos LDAP/AD.',
     'orizon.f8': 'Creación de formularios dinámicos y gestión de respuestas.',
     'orizon.f9': 'Formaciones y eventos: sesiones, inscripciones y seguimiento.',
-    'orizon.f10': 'Base documental (GED), temáticas y páginas de contenido.',
-    'orizon.f11': 'Espacios colaborativos: archivos, proyectos y calendario.',
+    'orizon.f10':
+      'GED avanzada: espacios documentales, temáticas, categorías y permisos detallados.',
+    'orizon.f11':
+      'Gestión de proyectos: espacios de equipo, seguimiento, archivos compartidos y calendario colaborativo.',
     'orizon.f12': 'Workspaces de negocio (partes de intervención, solicitudes, finanzas…).',
     'orizon.f13': 'Catálogo de apps y administración (contenidos, medios, personalización).',
     'orizon.f.more': '… y otros módulos activables según la organización.',
