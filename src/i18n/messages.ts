@@ -4,9 +4,9 @@ export const LANGS: Lang[] = ['fr', 'en', 'es']
 
 export const messages: Record<Lang, Record<string, string>> = {
   fr: {
-    'meta.title': 'Création site internet Martinique | Madinlab agency',
+    'meta.title': 'Création site internet Martinique · Madinlab agency',
     'meta.description':
-      'Sites sur mesure en Martinique, Guadeloupe et Guyane. Vitrine 550 €, dynamique 699 €, site marchand Stripe 999 €. Application iOS et Android dès 2 399 €.',
+      'Sites internet from scratch aux Antilles et en Guyane. Vitrine 550 €, dynamique 699 €, boutique Stripe 999 €. Apps iOS et Android dès 2 399 €. Devis sous 48 h.',
     'intro.slogan': "La seule limite, c'est votre imagination. Le reste, c'est notre métier.",
     'nav.call': 'Appeler',
     'nav.quote': 'Devis',
@@ -61,9 +61,9 @@ export const messages: Record<Lang, Record<string, string>> = {
     'work.p3.desc':
       'Intranet complet : validation, formations, formulaires, GED, messagerie et droits modulaires. From scratch.',
     'work.p3.link': 'Voir le projet',
-    'orizon.meta.title': 'Orizon — portail intranet | Madinlab',
+    'orizon.meta.title': 'Projet Orizon intranet · Madinlab agency',
     'orizon.meta.description':
-      'Projet Orizon : intranet sur mesure — annuaire, organigramme LDAP/RH, GED avancée, gestion de projet, validation et formations.',
+      'Intranet from scratch avec annuaire, organigramme LDAP ou fichier RH, GED avancée, gestion de projet, validation et formations. Réalisation Madinlab aux Antilles.',
     'orizon.nav.back': '← Réalisations',
     'orizon.tag': '[ Projet ]',
     'orizon.h1': 'Orizon',
@@ -216,9 +216,9 @@ export const messages: Record<Lang, Record<string, string>> = {
     'wizard.loc.other': 'Autre',
   },
   en: {
-    'meta.title': 'Web design Martinique | Madinlab agency',
+    'meta.title': 'Web design Martinique · Madinlab agency',
     'meta.description':
-      'Custom websites in Martinique, Guadeloupe and French Guiana. Starter €550, dynamic €699, Stripe store €999. iOS and Android apps from €2,399.',
+      'Custom websites from scratch in the French Caribbean and French Guiana. Starter €550, dynamic €699, Stripe store €999. iOS and Android from €2,399. Quote within 48 h.',
     'intro.slogan': 'The only limit is your imagination. We handle the rest.',
     'nav.call': 'Call',
     'nav.quote': 'Quote',
@@ -271,9 +271,9 @@ export const messages: Record<Lang, Record<string, string>> = {
     'work.p3.desc':
       'Full intranet: approvals, training, forms, DMS, messaging and modular permissions. From scratch.',
     'work.p3.link': 'View project',
-    'orizon.meta.title': 'Orizon — intranet portal | Madinlab',
+    'orizon.meta.title': 'Orizon intranet project · Madinlab agency',
     'orizon.meta.description':
-      'Orizon project: custom intranet — directory, LDAP/HR org chart, advanced DMS, project management, approvals and training.',
+      'From scratch intranet with directory, LDAP or HR org chart, advanced DMS, project management, approvals and training. Built by Madinlab.',
     'orizon.nav.back': '← Work',
     'orizon.tag': '[ Project ]',
     'orizon.h1': 'Orizon',
@@ -422,9 +422,9 @@ export const messages: Record<Lang, Record<string, string>> = {
     'wizard.loc.other': 'Other',
   },
   es: {
-    'meta.title': 'Creación de sitios web Martinica | Madinlab agency',
+    'meta.title': 'Creación de sitios web Martinica · Madinlab agency',
     'meta.description':
-      'Sitios a medida en Martinica, Guadalupe y Guayana Francesa. Vitrina 550 €, dinámico 699 €, tienda Stripe 999 €. Apps iOS y Android desde 2 399 €.',
+      'Sitios web from scratch en las Antillas y Guayana Francesa. Vitrina 550 €, dinámico 699 €, tienda Stripe 999 €. Apps iOS y Android desde 2 399 €. Presupuesto en 48 h.',
     'intro.slogan': 'El único límite es tu imaginación. Del resto nos ocupamos nosotros.',
     'nav.call': 'Llamar',
     'nav.quote': 'Presupuesto',
@@ -478,9 +478,9 @@ export const messages: Record<Lang, Record<string, string>> = {
     'work.p3.desc':
       'Intranet completo: validación, formación, formularios, GED, mensajería y permisos modulares. From scratch.',
     'work.p3.link': 'Ver el proyecto',
-    'orizon.meta.title': 'Orizon — portal intranet | Madinlab',
+    'orizon.meta.title': 'Proyecto Orizon intranet · Madinlab agency',
     'orizon.meta.description':
-      'Proyecto Orizon: intranet a medida — directorio, organigrama LDAP/RRHH, GED avanzada, gestión de proyectos, validación y formación.',
+      'Intranet from scratch con directorio, organigrama LDAP o fichero RRHH, GED avanzada, gestión de proyectos, validación y formación. Realizado por Madinlab.',
     'orizon.nav.back': '← Proyectos',
     'orizon.tag': '[ Proyecto ]',
     'orizon.h1': 'Orizon',
