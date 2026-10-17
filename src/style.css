@@ -282,11 +282,12 @@ a { color: inherit; }
 .hero__logo {
   position: relative;
   z-index: 2;
-  width: min(88vw, 820px);
+  width: min(94vw, 1024px);
   margin: 0 auto;
   line-height: 0;
 }
 .hero__logo img {
+  display: block;
   width: 100%;
   height: auto;
   max-width: none;
@@ -1696,7 +1697,7 @@ h2 em { font-style: italic; }
   .rates { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 900px) {
-  .hero__logo { width: min(92vw, 640px); }
+  .hero__logo { width: min(94vw, 100%); }
   .rates, .projects, .lines li { grid-template-columns: 1fr; }
   .foot { flex-direction: column; gap: 0.3rem; }
 }
