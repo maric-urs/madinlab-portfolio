@@ -282,7 +282,7 @@ a { color: inherit; }
 .hero__logo {
   position: relative;
   z-index: 2;
-  width: min(94vw, 1024px);
+  width: min(78vw, 440px);
   margin: 0 auto;
   line-height: 0;
 }
@@ -1697,7 +1697,7 @@ h2 em { font-style: italic; }
   .rates { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 900px) {
-  .hero__logo { width: min(94vw, 100%); }
+  .hero__logo { width: min(82vw, 360px); }
   .rates, .projects, .lines li { grid-template-columns: 1fr; }
   .foot { flex-direction: column; gap: 0.3rem; }
 }
