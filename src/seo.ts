@@ -1,13 +1,13 @@
 import { siteUrl } from './site-url'
-import { getLang, t } from './i18n'
+import { messages } from './i18n/messages'
 
 export function applySeoHead() {
   if (document.body.dataset.i18nPage) return
 
-  const title = t('meta.title')
-  const description = t('meta.description')
+  const title = messages.fr['meta.title']
+  const description = messages.fr['meta.description']
   const url = siteUrl('/')
-  const locale = getLang() === 'fr' ? 'fr_FR' : getLang() === 'es' ? 'es_ES' : 'en_US'
+  const locale = 'fr_FR'
 
   const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]')
   if (canonical) canonical.href = url
@@ -23,4 +23,7 @@ export function applySeoHead() {
   setMeta('meta[property="og:locale"]', locale)
   setMeta('meta[name="twitter:title"]', title)
   setMeta('meta[name="twitter:description"]', description)
+
+  const metaDesc = document.querySelector<HTMLMetaElement>('meta[name="description"]')
+  if (metaDesc) metaDesc.content = description
 }

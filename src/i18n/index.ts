@@ -23,12 +23,10 @@ export function t(key: string, vars?: Record<string, string | number>): string {
   return value
 }
 
+/** Français par défaut (SEO Google.fr) ; EN/ES uniquement si choix explicite enregistré. */
 function detectLang(): Lang {
   const stored = localStorage.getItem(STORAGE_KEY)
   if (stored && isLang(stored)) return stored
-  const nav = navigator.language.toLowerCase()
-  if (nav.startsWith('en')) return 'en'
-  if (nav.startsWith('es')) return 'es'
   return 'fr'
 }
 
