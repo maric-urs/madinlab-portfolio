@@ -1,11 +1,33 @@
 import './style.css'
 import { initI18n, getIntroSlogan, t } from './i18n'
+import { FORMSUBMIT_ENDPOINT } from './form-config'
+import { LEGAL_HOST, LEGAL_PUBLISHER_ADDRESS } from './legal-config'
 import { applySeoHead } from './seo'
 import { initTextAnimations } from './text-animate'
 
+function applyLegalStatic() {
+  document.querySelectorAll<HTMLElement>('[data-legal="publisher-address"]').forEach((el) => {
+    el.textContent = LEGAL_PUBLISHER_ADDRESS
+  })
+  document.querySelectorAll<HTMLElement>('[data-legal="host-name"]').forEach((el) => {
+    el.textContent = LEGAL_HOST.name
+  })
+  document.querySelectorAll<HTMLElement>('[data-legal="host-address"]').forEach((el) => {
+    el.textContent = LEGAL_HOST.address
+  })
+  document.querySelectorAll<HTMLAnchorElement>('[data-legal="host-url"]').forEach((el) => {
+    el.href = LEGAL_HOST.website
+    el.textContent = LEGAL_HOST.websiteLabel
+  })
+}
+
 initI18n()
+applyLegalStatic()
 applySeoHead()
-window.addEventListener('madinlab:lang', () => applySeoHead())
+window.addEventListener('madinlab:lang', () => {
+  applySeoHead()
+  applyLegalStatic()
+})
 
 if (!window.location.hash) {
   history.scrollRestoration = 'manual'
@@ -94,7 +116,6 @@ if (offresBits?.length) {
   }
 }
 
-const FORM_EMAIL = 'ursulet.maric@gmail.com'
 const TOTAL_STEPS = 5
 
 type FormulaKey = 'starter' | 'dynamique' | 'ecommerce' | 'surmesure' | 'unsure'
@@ -133,9 +154,40 @@ function initDevisWizard() {
   const btnNext = form.querySelector<HTMLButtonElement>('[data-wizard-next]')
   const btnSubmit = form.querySelector<HTMLButtonElement>('[data-wizard-submit]')
   const errorEl = form.querySelector<HTMLElement>('[data-wizard-error]')
-  const successEl = form.querySelector<HTMLElement>('[data-wizard-success]')
 
   let step = 1
+  let successPanel: HTMLElement | null = null
+
+  const fillSuccessPanel = (panel: HTMLElement) => {
+    panel.innerHTML = `
+      <div class="devis-form__done-ring" aria-hidden="true"><span>✓</span></div>
+      <h3 class="devis-form__done-title">${t('wizard.success.title')}</h3>
+      <p class="devis-form__done-lead">${t('wizard.success.lead')}</p>
+      <p class="devis-form__done-meta">${t('wizard.success.meta')}</p>
+    `
+  }
+
+  const showSuccessPanel = () => {
+    root.classList.add('devis-wizard--done')
+    form.querySelector('.devis-form__nav')?.remove()
+    form.querySelector('.devis-form__error')?.remove()
+    form.querySelector('[data-wizard-success]')?.remove()
+    steps.forEach((el) => {
+      el.remove()
+    })
+    root.querySelector('.devis-wizard__head')?.remove()
+
+    successPanel = document.createElement('div')
+    successPanel.className = 'devis-form__done'
+    successPanel.setAttribute('role', 'status')
+    successPanel.setAttribute('aria-live', 'polite')
+    fillSuccessPanel(successPanel)
+    form.append(successPanel)
+    root.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    window.setTimeout(() => {
+      successPanel?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }, 120)
+  }
 
   const formulaCards = Array.from(
     form.querySelectorAll<HTMLLabelElement>('.choice-card[data-formula-key]'),
@@ -196,10 +248,19 @@ function initDevisWizard() {
     return allowed.has(key)
   }
 
+  const consentRow = form.querySelector<HTMLElement>('.devis-form__consent')
+
   const showError = (msg: string) => {
     if (!errorEl) return
     errorEl.textContent = msg
     errorEl.hidden = !msg
+    if (msg) {
+      errorEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
+    }
+  }
+
+  const setConsentHighlight = (on: boolean) => {
+    consentRow?.classList.toggle('devis-form__consent--missing', on)
   }
 
   const setStep = (next: number, scrollToWizard = false) => {
@@ -245,12 +306,17 @@ function initDevisWizard() {
       if (!el.checkValidity()) return false
     }
     if (n === 2 && !isFormulaCompatible()) return false
+    if (n === TOTAL_STEPS) {
+      const consent = form.querySelector<HTMLInputElement>('input[name="consent_privacy"]:checked')
+      if (!consent) return false
+    }
     return true
   }
 
   const validateStep = (n: number): boolean => {
     if (isStepValid(n)) {
       showError('')
+      setConsentHighlight(false)
       return true
     }
     const panel = stepFields(n)
@@ -266,6 +332,15 @@ function initDevisWizard() {
     if (n === 2 && !isFormulaCompatible()) {
       showError(t('wizard.err.formula'))
       return false
+    }
+    if (n === TOTAL_STEPS) {
+      const consent = form.querySelector<HTMLInputElement>('input[name="consent_privacy"]:checked')
+      if (!consent) {
+        setConsentHighlight(true)
+        showError(t('wizard.err.consent'))
+        consentRow?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+        return false
+      }
     }
     const fields = panel.querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>(
       'input:not([type="radio"]):required, select[required], textarea[required]',
@@ -294,7 +369,8 @@ function initDevisWizard() {
       btnSubmit.disabled = true
       return
     }
-    btnSubmit.disabled = validateAllSteps() !== 0
+    /* Toujours cliquable à l’étape 5 : la validation affiche les messages (case RGPD, champs, etc.). */
+    btnSubmit.disabled = false
   }
 
   btnNext?.addEventListener('click', () => {
@@ -344,9 +420,13 @@ function initDevisWizard() {
   }
 
   form.addEventListener('change', (e) => {
-    const t = e.target
-    if (t instanceof HTMLInputElement && t.name === 'project_type') {
+    const target = e.target
+    if (target instanceof HTMLInputElement && target.name === 'project_type') {
       syncFormulaOptions()
+    }
+    if (target instanceof HTMLInputElement && target.name === 'consent_privacy') {
+      setConsentHighlight(false)
+      if (target.checked) showError('')
     }
     updateSubmitState()
   })
@@ -364,6 +444,13 @@ function initDevisWizard() {
 
     const fd = new FormData(form)
     if (fd.get('_honey')) return
+    if (!fd.get('consent_privacy')) {
+      setConsentHighlight(true)
+      showError(t('wizard.err.consent'))
+      consentRow?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      updateSubmitState()
+      return
+    }
 
     const name = String(fd.get('name') ?? '').trim()
     const company = String(fd.get('company') ?? '').trim()
@@ -411,29 +498,34 @@ function initDevisWizard() {
     }
 
     btnSubmit!.disabled = true
+    btnSubmit!.setAttribute('aria-busy', 'true')
+    btnSubmit!.textContent = t('wizard.btn.sending')
     showError('')
 
     try {
-      const res = await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(FORM_EMAIL)}`, {
+      const res = await fetch(`https://formsubmit.co/ajax/${FORMSUBMIT_ENDPOINT}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify(payload),
       })
-      if (!res.ok) throw new Error('network')
-      successEl!.hidden = false
-      successEl!.textContent = t('wizard.success')
-      form.querySelector('.devis-form__nav')?.remove()
-      steps.forEach((el) => {
-        el.hidden = true
-      })
-      root.querySelector('.devis-wizard__head')?.remove()
+      const data = (await res.json().catch(() => null)) as { success?: string | boolean } | null
+      if (!res.ok || (data && 'success' in data && String(data.success) !== 'true')) {
+        throw new Error('network')
+      }
+      showSuccessPanel()
     } catch {
       showError(t('wizard.fail'))
       btnSubmit!.disabled = false
+      btnSubmit!.removeAttribute('aria-busy')
+      btnSubmit!.textContent = t('wizard.btn.submit')
     }
   })
 
   window.addEventListener('madinlab:lang', () => {
+    if (successPanel) {
+      fillSuccessPanel(successPanel)
+      return
+    }
     setStep(step, false)
     syncFormulaOptions()
   })

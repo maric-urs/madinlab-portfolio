@@ -144,7 +144,7 @@ export const messages: Record<Lang, Record<string, string>> = {
     'foot.legal': 'Mentions légales',
     'legal.meta.title': 'Mentions légales · madinlab-agency',
     'legal.meta.description':
-      'Mentions légales du site madinlab agency. Éditeur, contact, hébergement et propriété intellectuelle.',
+      'Mentions légales et politique de confidentialité RGPD du site madinlab agency. Éditeur, hébergement, cookies et droits.',
     'legal.nav.back': '← Accueil',
     'legal.tag': '[ Mentions légales ]',
     'legal.h1': 'Mentions légales',
@@ -154,6 +154,7 @@ export const messages: Record<Lang, Record<string, string>> = {
       'Le site madinlab-agency est édité par Madinlab agency, agence de création web, sites internet, applications et logiciels sur mesure, basée en Martinique (France).',
     'legal.s1.name': 'Responsable de publication',
     'legal.s1.name.val': 'Ursulet Maric',
+    'legal.s1.address': 'Adresse postale',
     'legal.siret': 'Numéro SIRET',
     'legal.siret.value': '',
     'legal.s2.title': 'Contact',
@@ -161,17 +162,34 @@ export const messages: Record<Lang, Record<string, string>> = {
     'legal.s2.email': 'E-mail',
     'legal.s2.phone': 'Téléphone',
     'legal.s3.title': 'Hébergement',
-    'legal.s3.body':
-      'Le site est hébergé par Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis. Site de l’hébergeur : vercel.com.',
+    'legal.s3.intro':
+      'Conformément à la loi pour la confiance dans l’économie numérique (LCEN), voici l’identité et l’adresse postale de l’hébergeur du site (prestataire technique, distinct de l’éditeur Madinlab) :',
+    'legal.s3.host': 'Raison sociale',
+    'legal.s3.address': 'Adresse postale',
+    'legal.s3.web': 'Site web',
     'legal.s4.title': 'Propriété intellectuelle',
     'legal.s4.body':
       'L’ensemble du site (textes, visuels, charte graphique, code) est protégé par le droit d’auteur. Toute reproduction ou utilisation sans autorisation écrite de Madinlab agency est interdite. Les marques et logos cités restent la propriété de leurs titulaires.',
-    'legal.s5.title': 'Données personnelles',
-    'legal.s5.body':
-      'Les informations transmises via le formulaire de contact (identité, coordonnées, description du projet) sont utilisées uniquement pour répondre à votre demande et établir un devis. Elles ne sont pas revendues. Vous pouvez demander l’accès, la rectification ou la suppression de vos données en écrivant à ursulet.maric@gmail.com.',
-    'legal.s6.title': 'Limitation de responsabilité',
+    'legal.s5.title': 'Politique de confidentialité (RGPD)',
+    'legal.s5.p1':
+      'Le responsable du traitement est Ursulet Maric, agissant pour Madinlab agency (contact : ursulet.maric@gmail.com, +596 696 25 56 05).',
+    'legal.s5.p2':
+      'Données concernées : identité, coordonnées (e-mail, téléphone), description de projet et préférences indiquées dans le formulaire de devis. Finalités : répondre à votre demande, chiffrer une offre et assurer le suivi commercial. Nous ne revendons pas vos données et n’envoyons pas de newsletter sans consentement distinct.',
+    'legal.s5.p3':
+      'Base légale : votre consentement lors de l’envoi du formulaire, et l’intérêt légitime de traiter une demande commerciale. Durée de conservation : jusqu’à 3 ans après le dernier contact, sauf obligation légale contraire ou suppression demandée plus tôt.',
+    'legal.s5.p4':
+      'Destinataires : Madinlab agency et, pour le seul envoi du formulaire, le prestataire FormSubmit (formsubmit.co, États-Unis) qui transmet le message à notre messagerie. L’hébergeur (Vercel) peut traiter des journaux techniques (adresse IP, horodatage) pour la sécurité et la disponibilité du site. Les polices Raleway sont chargées depuis Google Fonts : Google peut recevoir votre adresse IP lors de cette requête.',
+    'legal.s5.p5':
+      'Transferts hors Union européenne : liés à l’hébergement, à l’envoi du formulaire et aux polices, avec les garanties usuelles des prestataires concernés. Vous disposez des droits d’accès, rectification, effacement, limitation, opposition et portabilité (lorsque applicable) en écrivant à ursulet.maric@gmail.com. En cas de difficulté, vous pouvez introduire une réclamation auprès de la CNIL (cnil.fr).',
+    'legal.s6.title': 'Cookies et traceurs',
     'legal.s6.body':
+      'Ce site n’utilise pas de cookies publicitaires ni d’outils de mesure d’audience (pas de Google Analytics). La langue choisie (FR / EN / ESP) est mémorisée dans le stockage local de votre navigateur, pour votre confort uniquement. Vous pouvez effacer ces données via les paramètres du navigateur.',
+    'legal.s7.title': 'Limitation de responsabilité',
+    'legal.s7.body':
       'Madinlab agency s’efforce d’assurer l’exactitude des informations publiées. Toutefois, le site peut contenir des inexactitudes ou être indisponible momentanément. L’utilisation du site se fait sous votre responsabilité.',
+    'wizard.consent':
+      'J’accepte que mes données soient utilisées pour traiter ma demande de devis, conformément à la <a href="/mentions-legales.html#confidentialite">politique de confidentialité</a>.',
+    'wizard.err.consent': 'Merci d’accepter la politique de confidentialité pour envoyer votre demande.',
     'wizard.step': 'Étape {n} sur {total}',
     'wizard.s1.title': 'Quel est votre projet ?',
     'wizard.s1.lead': 'Sélectionnez l’objectif principal de votre futur site.',
@@ -192,7 +210,11 @@ export const messages: Record<Lang, Record<string, string>> = {
     'wizard.err.required': 'Merci de compléter les champs obligatoires.',
     'wizard.err.step': 'Merci de compléter cette étape.',
     'wizard.err.all': 'Merci de compléter toutes les étapes avant l’envoi.',
-    'wizard.success': 'Merci ! Votre demande a bien été envoyée. Réponse sous 24 h.',
+    'wizard.success.title': 'Demande envoyée',
+    'wizard.success.lead':
+      'Votre message est bien parti. Nous vous répondons sous 24 h avec une estimation claire à l’adresse indiquée.',
+    'wizard.success.meta': 'Vous pouvez fermer cette page ou continuer à parcourir le site.',
+    'wizard.btn.sending': 'Envoi en cours…',
     'wizard.fail':
       'Envoi impossible pour le moment. Écrivez nous à ursulet.maric@gmail.com ou appelez le +596 696 25 56 05.',
     'hint.vitrine':
@@ -385,7 +407,7 @@ export const messages: Record<Lang, Record<string, string>> = {
     'foot.legal': 'Legal notice',
     'legal.meta.title': 'Legal notice · madinlab-agency',
     'legal.meta.description':
-      'Legal notice for madinlab agency website. Publisher, contact, hosting and intellectual property.',
+      'Legal notice and GDPR privacy policy for madinlab agency. Publisher, hosting, cookies and your rights.',
     'legal.nav.back': '← Home',
     'legal.tag': '[ Legal notice ]',
     'legal.h1': 'Legal notice',
@@ -395,6 +417,7 @@ export const messages: Record<Lang, Record<string, string>> = {
       'The madinlab-agency website is published by Madinlab agency, a custom web, app and business software studio based in Martinique (France).',
     'legal.s1.name': 'Publication director',
     'legal.s1.name.val': 'Ursulet Maric',
+    'legal.s1.address': 'Postal address',
     'legal.siret': 'SIRET number',
     'legal.siret.value': '',
     'legal.s2.title': 'Contact',
@@ -402,17 +425,34 @@ export const messages: Record<Lang, Record<string, string>> = {
     'legal.s2.email': 'Email',
     'legal.s2.phone': 'Phone',
     'legal.s3.title': 'Hosting',
-    'legal.s3.body':
-      'The site is hosted by Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, United States. Host website: vercel.com.',
+    'legal.s3.intro':
+      'Under applicable law, here is the identity and postal address of the technical host (separate from publisher Madinlab):',
+    'legal.s3.host': 'Company name',
+    'legal.s3.address': 'Postal address',
+    'legal.s3.web': 'Website',
     'legal.s4.title': 'Intellectual property',
     'legal.s4.body':
       'All site content (text, visuals, branding, code) is protected by copyright. Any reproduction or use without written permission from Madinlab agency is prohibited. Third-party trademarks remain the property of their owners.',
-    'legal.s5.title': 'Personal data',
-    'legal.s5.body':
-      'Information sent through the contact form (identity, details, project description) is used only to reply and prepare a quote. It is not sold. You may request access, correction or deletion by emailing ursulet.maric@gmail.com.',
-    'legal.s6.title': 'Liability',
+    'legal.s5.title': 'Privacy policy (GDPR)',
+    'legal.s5.p1':
+      'Data controller: Ursulet Maric, acting for Madinlab agency (ursulet.maric@gmail.com, +596 696 25 56 05).',
+    'legal.s5.p2':
+      'Data: identity, contact details (email, phone), project description and choices in the quote form. Purposes: reply to your request, prepare a quote and follow up commercially. We do not sell your data or send newsletters without separate consent.',
+    'legal.s5.p3':
+      'Legal basis: your consent when submitting the form, and legitimate interest in handling a business inquiry. Retention: up to 3 years after last contact, unless you request earlier deletion or law requires otherwise.',
+    'legal.s5.p4':
+      'Recipients: Madinlab agency and, for form delivery only, FormSubmit (formsubmit.co, USA) forwarding to our inbox. The host (Vercel) may process technical logs (IP, timestamps) for security and uptime. Raleway fonts are loaded from Google Fonts; Google may receive your IP for that request.',
+    'legal.s5.p5':
+      'Transfers outside the EU may occur for hosting, form delivery and fonts, under providers’ usual safeguards. You have rights of access, rectification, erasure, restriction, objection and portability where applicable — contact ursulet.maric@gmail.com. You may lodge a complaint with your supervisory authority.',
+    'legal.s6.title': 'Cookies and tracking',
     'legal.s6.body':
+      'No advertising cookies or analytics (no Google Analytics). Your language choice (FR / EN / ESP) is stored in local browser storage for convenience. You can clear it in browser settings.',
+    'legal.s7.title': 'Liability',
+    'legal.s7.body':
       'Madinlab agency strives to keep published information accurate. The site may contain errors or be temporarily unavailable. Use of the site is at your own risk.',
+    'wizard.consent':
+      'I agree that my data will be used to process my quote request, as described in the <a href="/mentions-legales.html#confidentialite">privacy policy</a>.',
+    'wizard.err.consent': 'Please accept the privacy policy to send your request.',
     'wizard.step': 'Step {n} of {total}',
     'wizard.s1.title': 'What is your project?',
     'wizard.s1.lead': 'Pick the main goal for your future site.',
@@ -432,7 +472,11 @@ export const messages: Record<Lang, Record<string, string>> = {
     'wizard.err.required': 'Please fill in the required fields.',
     'wizard.err.step': 'Please complete this step.',
     'wizard.err.all': 'Please complete every step before sending.',
-    'wizard.success': 'Thank you! Your request was sent. We will reply within 24 h.',
+    'wizard.success.title': 'Request sent',
+    'wizard.success.lead':
+      'Your message was delivered. We will reply within 24 h with a clear estimate at the email you provided.',
+    'wizard.success.meta': 'You can close this page or keep browsing the site.',
+    'wizard.btn.sending': 'Sending…',
     'wizard.fail':
       'Could not send right now. Email ursulet.maric@gmail.com or call +596 696 25 56 05.',
     'hint.vitrine': 'For a simple showcase, the Starter plan (€550) is enough. You can also ask for advice.',
@@ -624,7 +668,7 @@ export const messages: Record<Lang, Record<string, string>> = {
     'foot.legal': 'Aviso legal',
     'legal.meta.title': 'Aviso legal · madinlab-agency',
     'legal.meta.description':
-      'Aviso legal del sitio madinlab agency. Editor, contacto, alojamiento y propiedad intelectual.',
+      'Aviso legal y política de privacidad RGPD de madinlab agency. Editor, alojamiento, cookies y derechos.',
     'legal.nav.back': '← Inicio',
     'legal.tag': '[ Aviso legal ]',
     'legal.h1': 'Aviso legal',
@@ -634,6 +678,7 @@ export const messages: Record<Lang, Record<string, string>> = {
       'El sitio madinlab-agency está editado por Madinlab agency, agencia de creación web, sitios, aplicaciones y software a medida, con sede en Martinica (Francia).',
     'legal.s1.name': 'Director de publicación',
     'legal.s1.name.val': 'Ursulet Maric',
+    'legal.s1.address': 'Dirección postal',
     'legal.siret': 'Número SIRET',
     'legal.siret.value': '',
     'legal.s2.title': 'Contacto',
@@ -641,17 +686,34 @@ export const messages: Record<Lang, Record<string, string>> = {
     'legal.s2.email': 'Correo',
     'legal.s2.phone': 'Teléfono',
     'legal.s3.title': 'Alojamiento',
-    'legal.s3.body':
-      'El sitio está alojado por Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, Estados Unidos. Web del alojamiento: vercel.com.',
+    'legal.s3.intro':
+      'Conforme a la ley aplicable, identidad y dirección postal del alojamiento técnico (distinto del editor Madinlab):',
+    'legal.s3.host': 'Razón social',
+    'legal.s3.address': 'Dirección postal',
+    'legal.s3.web': 'Sitio web',
     'legal.s4.title': 'Propiedad intelectual',
     'legal.s4.body':
       'Todo el contenido del sitio (textos, visuales, identidad, código) está protegido por derechos de autor. Queda prohibida su reproducción o uso sin autorización escrita de Madinlab agency. Las marcas citadas pertenecen a sus titulares.',
-    'legal.s5.title': 'Datos personales',
-    'legal.s5.body':
-      'Los datos enviados mediante el formulario de contacto se utilizan únicamente para responder y preparar un presupuesto. No se venden. Puede solicitar acceso, rectificación o supresión escribiendo a ursulet.maric@gmail.com.',
-    'legal.s6.title': 'Responsabilidad',
+    'legal.s5.title': 'Política de privacidad (RGPD)',
+    'legal.s5.p1':
+      'Responsable del tratamiento: Ursulet Maric, en nombre de Madinlab agency (ursulet.maric@gmail.com, +596 696 25 56 05).',
+    'legal.s5.p2':
+      'Datos: identidad, contacto (correo, teléfono), descripción del proyecto y opciones del formulario. Finalidades: responder, preparar presupuesto y seguimiento comercial. No vendemos sus datos ni enviamos boletines sin consentimiento aparte.',
+    'legal.s5.p3':
+      'Base legal: su consentimiento al enviar el formulario e interés legítimo en tratar una solicitud comercial. Conservación: hasta 3 años tras el último contacto, salvo supresión anticipada o obligación legal.',
+    'legal.s5.p4':
+      'Destinatarios: Madinlab agency y, solo para el envío, FormSubmit (formsubmit.co, EE. UU.) hacia nuestro correo. El alojamiento (Vercel) puede tratar registros técnicos (IP, fechas) por seguridad. Las fuentes Raleway se cargan desde Google Fonts; Google puede recibir su IP.',
+    'legal.s5.p5':
+      'Pueden existir transferencias fuera de la UE (alojamiento, formulario, fuentes). Derechos de acceso, rectificación, supresión, limitación, oposición y portabilidad cuando corresponda: ursulet.maric@gmail.com. Reclamación ante la autoridad de control competente.',
+    'legal.s6.title': 'Cookies y rastreadores',
     'legal.s6.body':
+      'Sin cookies publicitarias ni analítica (sin Google Analytics). El idioma elegido (FR / EN / ESP) se guarda en el almacenamiento local del navegador. Puede borrarlo en la configuración del navegador.',
+    'legal.s7.title': 'Responsabilidad',
+    'legal.s7.body':
       'Madinlab agency procura mantener la información exacta. El sitio puede contener errores o estar temporalmente indisponible. El uso del sitio es bajo su responsabilidad.',
+    'wizard.consent':
+      'Acepto que mis datos se utilicen para tramitar mi solicitud de presupuesto, según la <a href="/mentions-legales.html#confidentialite">política de privacidad</a>.',
+    'wizard.err.consent': 'Acepte la política de privacidad para enviar su solicitud.',
     'wizard.step': 'Paso {n} de {total}',
     'wizard.s1.title': '¿Cuál es su proyecto?',
     'wizard.s1.lead': 'Seleccione el objetivo principal de su futuro sitio.',
@@ -672,7 +734,11 @@ export const messages: Record<Lang, Record<string, string>> = {
     'wizard.err.required': 'Complete los campos obligatorios.',
     'wizard.err.step': 'Complete este paso.',
     'wizard.err.all': 'Complete todos los pasos antes de enviar.',
-    'wizard.success': '¡Gracias! Su solicitud se envió correctamente. Respuesta en 24 h.',
+    'wizard.success.title': 'Solicitud enviada',
+    'wizard.success.lead':
+      'Su mensaje se envió correctamente. Respondemos en 24 h con una estimación clara al correo indicado.',
+    'wizard.success.meta': 'Puede cerrar esta página o seguir navegando.',
+    'wizard.btn.sending': 'Enviando…',
     'wizard.fail':
       'No se pudo enviar ahora. Escriba a ursulet.maric@gmail.com o llame al +596 696 25 56 05.',
     'hint.vitrine':

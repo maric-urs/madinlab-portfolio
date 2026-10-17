@@ -622,10 +622,14 @@
                   <textarea name="message" rows="4" data-i18n-placeholder="wizard.message.placeholder" placeholder="Décrivez votre activité, vos objectifs…"></textarea>
                 </label>
               </div>
+              <label class="check-row devis-form__consent">
+                <input type="checkbox" name="consent_privacy" value="oui" required />
+                <span data-i18n-html="wizard.consent"
+                  >J’accepte que mes données soient utilisées pour traiter ma demande de devis, conformément à la
+                  <a href="/mentions-legales.html#confidentialite">politique de confidentialité</a>.</span
+                >
+              </label>
             </div>
-
-            <p class="devis-form__error" data-wizard-error hidden role="alert"></p>
-            <p class="devis-form__success" data-wizard-success hidden role="status"></p>
 
             <div class="devis-form__nav">
               <button type="button" class="btn-wizard btn-wizard--ghost" data-wizard-prev hidden data-i18n="wizard.btn.back">Retour</button>
@@ -634,6 +638,8 @@
                 Envoyer ma demande et recevoir mon estimation
               </button>
             </div>
+            <p class="devis-form__error" data-wizard-error hidden role="alert"></p>
+            <p class="devis-form__success" data-wizard-success hidden role="status"></p>
           </form>
         </div>
         </div>
