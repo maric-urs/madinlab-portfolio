@@ -1225,15 +1225,16 @@ h2 em { font-style: italic; }
   max-width: 42rem;
   font-size: 0.88rem;
   line-height: 1.45;
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--ink-soft);
 }
 .devis-form__consent a {
-  color: inherit;
+  color: var(--accent-deep);
+  font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
 .devis-form__consent a:hover {
-  color: #fff;
+  color: var(--accent-bright);
 }
 .devis-form__consent--missing {
   padding: 0.65rem 0.75rem;
