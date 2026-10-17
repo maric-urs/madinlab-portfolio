@@ -1,6 +1,7 @@
 import './style.css'
 import { initI18n, getIntroSlogan, t } from './i18n'
-import { FORMSUBMIT_ENDPOINT } from './form-config'
+import { FORMSUBMIT_ENDPOINT, SITE_CONTACT_EMAIL } from './form-config'
+import { SITE_PHONE_DISPLAY } from './legal-config'
 import { LEGAL_HOST, LEGAL_PUBLISHER_ADDRESS } from './legal-config'
 import { applySeoHead } from './seo'
 import { initTextAnimations } from './text-animate'
@@ -117,6 +118,9 @@ if (offresBits?.length) {
 }
 
 const TOTAL_STEPS = 5
+
+const wizardFailMessage = () =>
+  t('wizard.fail', { email: SITE_CONTACT_EMAIL, phone: SITE_PHONE_DISPLAY })
 
 type FormulaKey = 'starter' | 'dynamique' | 'ecommerce' | 'surmesure' | 'unsure'
 
@@ -511,13 +515,20 @@ function initDevisWizard() {
           body: JSON.stringify(payload),
         },
       )
-      const data = (await res.json().catch(() => null)) as { success?: string | boolean } | null
-      if (!res.ok || (data && 'success' in data && String(data.success) !== 'true')) {
+      const data = (await res.json().catch(() => null)) as {
+        success?: string | boolean
+        message?: string
+      } | null
+      const ok =
+        res.ok &&
+        (!data || !('success' in data) || String(data.success).toLowerCase() === 'true')
+      if (!ok) {
+        console.warn('FormSubmit:', data?.message ?? res.status)
         throw new Error('network')
       }
       showSuccessPanel()
     } catch {
-      showError(t('wizard.fail'))
+      showError(wizardFailMessage())
       btnSubmit!.disabled = false
       btnSubmit!.removeAttribute('aria-busy')
       btnSubmit!.textContent = t('wizard.btn.submit')

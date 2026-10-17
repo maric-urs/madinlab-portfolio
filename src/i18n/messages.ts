@@ -216,7 +216,7 @@ export const messages: Record<Lang, Record<string, string>> = {
     'wizard.success.meta': 'Vous pouvez fermer cette page ou continuer à parcourir le site.',
     'wizard.btn.sending': 'Envoi en cours…',
     'wizard.fail':
-      'Envoi impossible pour le moment. Écrivez nous à contact@madinlabagency.com ou appelez le 0696 52 23 47.',
+      'Envoi impossible pour le moment. Écrivez-nous à {email} ou appelez le {phone}.',
     'hint.vitrine':
       'Pour une simple vitrine, la formule Starter (550 €) suffit. Vous pouvez aussi demander conseil.',
     'hint.rdv':
@@ -477,8 +477,7 @@ export const messages: Record<Lang, Record<string, string>> = {
       'Your message was delivered. We will reply within 24 h with a clear estimate at the email you provided.',
     'wizard.success.meta': 'You can close this page or keep browsing the site.',
     'wizard.btn.sending': 'Sending…',
-    'wizard.fail':
-      'Could not send right now. Email contact@madinlabagency.com or call 0696 52 23 47.',
+    'wizard.fail': 'Could not send right now. Email {email} or call {phone}.',
     'hint.vitrine': 'For a simple showcase, the Starter plan (€550) is enough. You can also ask for advice.',
     'hint.rdv': 'Online booking needs at least the Dynamic plan (€699). Starter alone is not enough.',
     'hint.shop': 'Selling online matches the E-commerce plan (€999) with Stripe.',
@@ -739,8 +738,7 @@ export const messages: Record<Lang, Record<string, string>> = {
       'Su mensaje se envió correctamente. Respondemos en 24 h con una estimación clara al correo indicado.',
     'wizard.success.meta': 'Puede cerrar esta página o seguir navegando.',
     'wizard.btn.sending': 'Enviando…',
-    'wizard.fail':
-      'No se pudo enviar ahora. Escriba a contact@madinlabagency.com o llame al 0696 52 23 47.',
+    'wizard.fail': 'No se pudo enviar ahora. Escriba a {email} o llame al {phone}.',
     'hint.vitrine':
       'Para una vitrina simple, la fórmula Starter (550 €) basta. También puede pedir consejo.',
     'hint.rdv':
