@@ -4,14 +4,15 @@ export const LANGS: Lang[] = ['fr', 'en', 'es']
 
 export const messages: Record<Lang, Record<string, string>> = {
   fr: {
-    'meta.title': 'madinlab-agency',
+    'meta.title': 'madinlab-agency · webmaster et site internet Martinique',
     'meta.description':
-      'Sites internet from scratch aux Antilles et en Guyane. Vitrine 550 €, dynamique 699 €, boutique Stripe 999 €. Apps iOS et Android dès 2 399 €. Devis sous 48 h.',
+      'Webmaster et création de site internet en Martinique. Sites from scratch aux Antilles et en Guyane. Vitrine 550 €, dynamique 699 €, e-commerce 999 €. Devis sous 48 h.',
+    'seo.h1': 'Webmaster et création de site internet en Martinique',
     'intro.slogan': "La seule limite, c'est votre imagination. Le reste, c'est notre métier.",
     'nav.call': 'Appeler',
     'nav.quote': 'Devis',
     'nav.lang': 'Langue',
-    'hero.meta': 'Martinique, Guadeloupe, Guyane',
+    'hero.meta': 'Webmaster · site internet Martinique, Guadeloupe et Guyane',
     'ticker.1': 'Recevoir le devis',
     'ticker.2': 'Support 1 an',
     'ticker.3': 'Sur mesure',
@@ -247,14 +248,15 @@ export const messages: Record<Lang, Record<string, string>> = {
     'wizard.loc.other': 'Autre',
   },
   en: {
-    'meta.title': 'madinlab-agency',
+    'meta.title': 'madinlab-agency · webmaster & websites Martinique',
     'meta.description':
-      'Custom websites from scratch in the French Caribbean and French Guiana. Starter €550, dynamic €699, Stripe store €999. iOS and Android from €2,399. Quote within 48 h.',
+      'Webmaster and custom websites in Martinique. From scratch builds across the French Caribbean. Starter €550, dynamic €699, store €999. Quote within 48 h.',
+    'seo.h1': 'Webmaster and website design in Martinique',
     'intro.slogan': 'The only limit is your imagination. We handle the rest.',
     'nav.call': 'Call',
     'nav.quote': 'Quote',
     'nav.lang': 'Language',
-    'hero.meta': 'Martinique, Guadeloupe, French Guiana',
+    'hero.meta': 'Webmaster · websites Martinique, Guadeloupe and French Guiana',
     'ticker.1': 'Get a quote',
     'ticker.2': '1 year support',
     'ticker.3': 'Custom built',
@@ -484,14 +486,15 @@ export const messages: Record<Lang, Record<string, string>> = {
     'wizard.loc.other': 'Other',
   },
   es: {
-    'meta.title': 'madinlab-agency',
+    'meta.title': 'madinlab-agency · webmaster y sitios web Martinica',
     'meta.description':
-      'Sitios web from scratch en las Antillas y Guayana Francesa. Vitrina 550 €, dinámico 699 €, tienda Stripe 999 €. Apps iOS y Android desde 2 399 €. Presupuesto en 48 h.',
+      'Webmaster y creación de sitios web en Martinica. Proyectos from scratch en las Antillas. Vitrina 550 €, dinámico 699 €, tienda 999 €. Presupuesto en 48 h.',
+    'seo.h1': 'Webmaster y sitios web en Martinica',
     'intro.slogan': 'El único límite es tu imaginación. Del resto nos ocupamos nosotros.',
     'nav.call': 'Llamar',
     'nav.quote': 'Presupuesto',
     'nav.lang': 'Idioma',
-    'hero.meta': 'Martinica, Guadalupe, Guayana Francesa',
+    'hero.meta': 'Webmaster · sitios web Martinica, Guadalupe y Guayana Francesa',
     'ticker.1': 'Pedir presupuesto',
     'ticker.2': 'Soporte 1 año',
     'ticker.3': 'A medida',

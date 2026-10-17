@@ -1,8 +1,11 @@
 import './style.css'
 import { initI18n, getIntroSlogan, t } from './i18n'
+import { applySeoHead } from './seo'
 import { initTextAnimations } from './text-animate'
 
 initI18n()
+applySeoHead()
+window.addEventListener('madinlab:lang', () => applySeoHead())
 
 if (!window.location.hash) {
   history.scrollRestoration = 'manual'
