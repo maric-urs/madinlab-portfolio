@@ -503,11 +503,14 @@ function initDevisWizard() {
     showError('')
 
     try {
-      const res = await fetch(`https://formsubmit.co/ajax/${FORMSUBMIT_ENDPOINT}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(payload),
-      })
+      const res = await fetch(
+        `https://formsubmit.co/ajax/${encodeURIComponent(FORMSUBMIT_ENDPOINT)}`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(payload),
+        },
+      )
       const data = (await res.json().catch(() => null)) as { success?: string | boolean } | null
       if (!res.ok || (data && 'success' in data && String(data.success) !== 'true')) {
         throw new Error('network')

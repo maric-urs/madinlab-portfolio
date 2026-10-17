@@ -10,7 +10,7 @@
 |--------|--------|
 | Nom | Madinlab agency |
 | URL (à mettre à jour au déploiement) | https://madinlab-agency.vercel.app |
-| E-mail | ursulet.maric@gmail.com |
+| E-mail | contact@madinlabagency.com |
 | Téléphone | +596 696 25 56 05 |
 | WhatsApp | https://wa.me/596696255605 |
 | Horaires | Lun · Ven · réponse sous 48 h |
