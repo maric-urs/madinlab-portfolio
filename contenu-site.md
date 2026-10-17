@@ -11,8 +11,8 @@
 | Nom | Madinlab agency |
 | URL (à mettre à jour au déploiement) | https://madinlab-agency.vercel.app |
 | E-mail | contact@madinlabagency.com |
-| Téléphone | +596 696 25 56 05 |
-| WhatsApp | https://wa.me/596696255605 |
+| Téléphone | 0696 52 23 47 |
+| WhatsApp | https://wa.me/596696522347 |
 | Horaires | Lun · Ven · réponse sous 48 h |
 | Zones | Martinique, Guadeloupe, Guyane française |
 

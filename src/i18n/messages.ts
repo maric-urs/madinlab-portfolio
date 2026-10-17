@@ -172,7 +172,7 @@ export const messages: Record<Lang, Record<string, string>> = {
       'L’ensemble du site (textes, visuels, charte graphique, code) est protégé par le droit d’auteur. Toute reproduction ou utilisation sans autorisation écrite de Madinlab agency est interdite. Les marques et logos cités restent la propriété de leurs titulaires.',
     'legal.s5.title': 'Politique de confidentialité (RGPD)',
     'legal.s5.p1':
-      'Le responsable du traitement est Ursulet Maric, agissant pour Madinlab agency (contact : contact@madinlabagency.com, +596 696 25 56 05).',
+      'Le responsable du traitement est Ursulet Maric, agissant pour Madinlab agency (contact : contact@madinlabagency.com, 0696 52 23 47).',
     'legal.s5.p2':
       'Données concernées : identité, coordonnées (e-mail, téléphone), description de projet et préférences indiquées dans le formulaire de devis. Finalités : répondre à votre demande, chiffrer une offre et assurer le suivi commercial. Nous ne revendons pas vos données et n’envoyons pas de newsletter sans consentement distinct.',
     'legal.s5.p3':
@@ -216,7 +216,7 @@ export const messages: Record<Lang, Record<string, string>> = {
     'wizard.success.meta': 'Vous pouvez fermer cette page ou continuer à parcourir le site.',
     'wizard.btn.sending': 'Envoi en cours…',
     'wizard.fail':
-      'Envoi impossible pour le moment. Écrivez nous à contact@madinlabagency.com ou appelez le +596 696 25 56 05.',
+      'Envoi impossible pour le moment. Écrivez nous à contact@madinlabagency.com ou appelez le 0696 52 23 47.',
     'hint.vitrine':
       'Pour une simple vitrine, la formule Starter (550 €) suffit. Vous pouvez aussi demander conseil.',
     'hint.rdv':
@@ -435,7 +435,7 @@ export const messages: Record<Lang, Record<string, string>> = {
       'All site content (text, visuals, branding, code) is protected by copyright. Any reproduction or use without written permission from Madinlab agency is prohibited. Third-party trademarks remain the property of their owners.',
     'legal.s5.title': 'Privacy policy (GDPR)',
     'legal.s5.p1':
-      'Data controller: Ursulet Maric, acting for Madinlab agency (contact@madinlabagency.com, +596 696 25 56 05).',
+      'Data controller: Ursulet Maric, acting for Madinlab agency (contact@madinlabagency.com, 0696 52 23 47).',
     'legal.s5.p2':
       'Data: identity, contact details (email, phone), project description and choices in the quote form. Purposes: reply to your request, prepare a quote and follow up commercially. We do not sell your data or send newsletters without separate consent.',
     'legal.s5.p3':
@@ -478,7 +478,7 @@ export const messages: Record<Lang, Record<string, string>> = {
     'wizard.success.meta': 'You can close this page or keep browsing the site.',
     'wizard.btn.sending': 'Sending…',
     'wizard.fail':
-      'Could not send right now. Email contact@madinlabagency.com or call +596 696 25 56 05.',
+      'Could not send right now. Email contact@madinlabagency.com or call 0696 52 23 47.',
     'hint.vitrine': 'For a simple showcase, the Starter plan (€550) is enough. You can also ask for advice.',
     'hint.rdv': 'Online booking needs at least the Dynamic plan (€699). Starter alone is not enough.',
     'hint.shop': 'Selling online matches the E-commerce plan (€999) with Stripe.',
@@ -696,7 +696,7 @@ export const messages: Record<Lang, Record<string, string>> = {
       'Todo el contenido del sitio (textos, visuales, identidad, código) está protegido por derechos de autor. Queda prohibida su reproducción o uso sin autorización escrita de Madinlab agency. Las marcas citadas pertenecen a sus titulares.',
     'legal.s5.title': 'Política de privacidad (RGPD)',
     'legal.s5.p1':
-      'Responsable del tratamiento: Ursulet Maric, en nombre de Madinlab agency (contact@madinlabagency.com, +596 696 25 56 05).',
+      'Responsable del tratamiento: Ursulet Maric, en nombre de Madinlab agency (contact@madinlabagency.com, 0696 52 23 47).',
     'legal.s5.p2':
       'Datos: identidad, contacto (correo, teléfono), descripción del proyecto y opciones del formulario. Finalidades: responder, preparar presupuesto y seguimiento comercial. No vendemos sus datos ni enviamos boletines sin consentimiento aparte.',
     'legal.s5.p3':
@@ -740,7 +740,7 @@ export const messages: Record<Lang, Record<string, string>> = {
     'wizard.success.meta': 'Puede cerrar esta página o seguir navegando.',
     'wizard.btn.sending': 'Enviando…',
     'wizard.fail':
-      'No se pudo enviar ahora. Escriba a contact@madinlabagency.com o llame al +596 696 25 56 05.',
+      'No se pudo enviar ahora. Escriba a contact@madinlabagency.com o llame al 0696 52 23 47.',
     'hint.vitrine':
       'Para una vitrina simple, la fórmula Starter (550 €) basta. También puede pedir consejo.',
     'hint.rdv':
