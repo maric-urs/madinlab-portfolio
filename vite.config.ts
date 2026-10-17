@@ -8,6 +8,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         orizon: resolve(__dirname, 'orizon.html'),
+        legal: resolve(__dirname, 'mentions-legales.html'),
       },
     },
   },

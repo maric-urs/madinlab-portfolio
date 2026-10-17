@@ -140,6 +140,37 @@ export const messages: Record<Lang, Record<string, string>> = {
     'contact.teaser':
       'Quelques questions guidées pour cadrer votre projet. Réponse sous 24 h avec une estimation claire.',
     'foot.region': 'Antilles et Guyane',
+    'foot.legal': 'Mentions légales',
+    'legal.meta.title': 'Mentions légales · madinlab-agency',
+    'legal.meta.description':
+      'Mentions légales du site madinlab agency. Éditeur, contact, hébergement et propriété intellectuelle.',
+    'legal.nav.back': '← Accueil',
+    'legal.tag': '[ Mentions légales ]',
+    'legal.h1': 'Mentions légales',
+    'legal.updated': 'Dernière mise à jour : octobre 2026',
+    'legal.s1.title': 'Éditeur du site',
+    'legal.s1.body':
+      'Le site madinlab-agency est édité par Madinlab agency, agence de création web, sites internet, applications et logiciels sur mesure, basée en Martinique (France).',
+    'legal.s1.name': 'Responsable de publication',
+    'legal.s1.name.val': 'Ursulet Maric',
+    'legal.siret': 'Numéro SIRET',
+    'legal.siret.value': '',
+    'legal.s2.title': 'Contact',
+    'legal.s2.body': 'Pour toute question relative au site ou à nos services :',
+    'legal.s2.email': 'E-mail',
+    'legal.s2.phone': 'Téléphone',
+    'legal.s3.title': 'Hébergement',
+    'legal.s3.body':
+      'Le site est hébergé par Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis. Site de l’hébergeur : vercel.com.',
+    'legal.s4.title': 'Propriété intellectuelle',
+    'legal.s4.body':
+      'L’ensemble du site (textes, visuels, charte graphique, code) est protégé par le droit d’auteur. Toute reproduction ou utilisation sans autorisation écrite de Madinlab agency est interdite. Les marques et logos cités restent la propriété de leurs titulaires.',
+    'legal.s5.title': 'Données personnelles',
+    'legal.s5.body':
+      'Les informations transmises via le formulaire de contact (identité, coordonnées, description du projet) sont utilisées uniquement pour répondre à votre demande et établir un devis. Elles ne sont pas revendues. Vous pouvez demander l’accès, la rectification ou la suppression de vos données en écrivant à ursulet.maric@gmail.com.',
+    'legal.s6.title': 'Limitation de responsabilité',
+    'legal.s6.body':
+      'Madinlab agency s’efforce d’assurer l’exactitude des informations publiées. Toutefois, le site peut contenir des inexactitudes ou être indisponible momentanément. L’utilisation du site se fait sous votre responsabilité.',
     'wizard.step': 'Étape {n} sur {total}',
     'wizard.s1.title': 'Quel est votre projet ?',
     'wizard.s1.lead': 'Sélectionnez l’objectif principal de votre futur site.',
@@ -349,6 +380,37 @@ export const messages: Record<Lang, Record<string, string>> = {
     'contact.h2': 'Tell us<br /><em>about your business.</em>',
     'contact.teaser': 'A short guided form to scope your project. Reply within 24 h with a clear estimate.',
     'foot.region': 'French Caribbean & Guiana',
+    'foot.legal': 'Legal notice',
+    'legal.meta.title': 'Legal notice · madinlab-agency',
+    'legal.meta.description':
+      'Legal notice for madinlab agency website. Publisher, contact, hosting and intellectual property.',
+    'legal.nav.back': '← Home',
+    'legal.tag': '[ Legal notice ]',
+    'legal.h1': 'Legal notice',
+    'legal.updated': 'Last updated: October 2026',
+    'legal.s1.title': 'Site publisher',
+    'legal.s1.body':
+      'The madinlab-agency website is published by Madinlab agency, a custom web, app and business software studio based in Martinique (France).',
+    'legal.s1.name': 'Publication director',
+    'legal.s1.name.val': 'Ursulet Maric',
+    'legal.siret': 'SIRET number',
+    'legal.siret.value': '',
+    'legal.s2.title': 'Contact',
+    'legal.s2.body': 'For any question about the site or our services:',
+    'legal.s2.email': 'Email',
+    'legal.s2.phone': 'Phone',
+    'legal.s3.title': 'Hosting',
+    'legal.s3.body':
+      'The site is hosted by Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, United States. Host website: vercel.com.',
+    'legal.s4.title': 'Intellectual property',
+    'legal.s4.body':
+      'All site content (text, visuals, branding, code) is protected by copyright. Any reproduction or use without written permission from Madinlab agency is prohibited. Third-party trademarks remain the property of their owners.',
+    'legal.s5.title': 'Personal data',
+    'legal.s5.body':
+      'Information sent through the contact form (identity, details, project description) is used only to reply and prepare a quote. It is not sold. You may request access, correction or deletion by emailing ursulet.maric@gmail.com.',
+    'legal.s6.title': 'Liability',
+    'legal.s6.body':
+      'Madinlab agency strives to keep published information accurate. The site may contain errors or be temporarily unavailable. Use of the site is at your own risk.',
     'wizard.step': 'Step {n} of {total}',
     'wizard.s1.title': 'What is your project?',
     'wizard.s1.lead': 'Pick the main goal for your future site.',
@@ -556,6 +618,37 @@ export const messages: Record<Lang, Record<string, string>> = {
     'contact.h2': 'Cuéntenos<br /><em>su actividad.</em>',
     'contact.teaser': 'Unas preguntas guiadas para definir su proyecto. Respuesta en 24 h con estimación clara.',
     'foot.region': 'Antillas y Guayana',
+    'foot.legal': 'Aviso legal',
+    'legal.meta.title': 'Aviso legal · madinlab-agency',
+    'legal.meta.description':
+      'Aviso legal del sitio madinlab agency. Editor, contacto, alojamiento y propiedad intelectual.',
+    'legal.nav.back': '← Inicio',
+    'legal.tag': '[ Aviso legal ]',
+    'legal.h1': 'Aviso legal',
+    'legal.updated': 'Última actualización: octubre de 2026',
+    'legal.s1.title': 'Editor del sitio',
+    'legal.s1.body':
+      'El sitio madinlab-agency está editado por Madinlab agency, agencia de creación web, sitios, aplicaciones y software a medida, con sede en Martinica (Francia).',
+    'legal.s1.name': 'Director de publicación',
+    'legal.s1.name.val': 'Ursulet Maric',
+    'legal.siret': 'Número SIRET',
+    'legal.siret.value': '',
+    'legal.s2.title': 'Contacto',
+    'legal.s2.body': 'Para cualquier consulta sobre el sitio o nuestros servicios:',
+    'legal.s2.email': 'Correo',
+    'legal.s2.phone': 'Teléfono',
+    'legal.s3.title': 'Alojamiento',
+    'legal.s3.body':
+      'El sitio está alojado por Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, Estados Unidos. Web del alojamiento: vercel.com.',
+    'legal.s4.title': 'Propiedad intelectual',
+    'legal.s4.body':
+      'Todo el contenido del sitio (textos, visuales, identidad, código) está protegido por derechos de autor. Queda prohibida su reproducción o uso sin autorización escrita de Madinlab agency. Las marcas citadas pertenecen a sus titulares.',
+    'legal.s5.title': 'Datos personales',
+    'legal.s5.body':
+      'Los datos enviados mediante el formulario de contacto se utilizan únicamente para responder y preparar un presupuesto. No se venden. Puede solicitar acceso, rectificación o supresión escribiendo a ursulet.maric@gmail.com.',
+    'legal.s6.title': 'Responsabilidad',
+    'legal.s6.body':
+      'Madinlab agency procura mantener la información exacta. El sitio puede contener errores o estar temporalmente indisponible. El uso del sitio es bajo su responsabilidad.',
     'wizard.step': 'Paso {n} de {total}',
     'wizard.s1.title': '¿Cuál es su proyecto?',
     'wizard.s1.lead': 'Seleccione el objetivo principal de su futuro sitio.',
