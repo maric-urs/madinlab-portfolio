@@ -51,7 +51,7 @@ export const messages: Record<Lang, Record<string, string>> = {
     'work.tag': '[ Réalisations ]',
     'work.h2': 'Le niveau se juge <em>sur le site du client.</em>',
     'work.founder.aria': 'Fondateur Madinlab',
-    'work.founder.alt': 'Portrait d’Ursulet Maric, fondateur de Madinlab',
+    'work.founder.alt': 'Portrait de Maric, fondateur de Madinlab',
     'work.founder.role': 'Fondateur et développeur, Madinlab',
     'work.founder.note': 'Chaque projet est conçu avec soin et livré prêt à performer.',
     'work.p1.cat': '01 Tourisme',
@@ -153,7 +153,7 @@ export const messages: Record<Lang, Record<string, string>> = {
     'legal.s1.body':
       'Le site madinlab-agency est édité par Madinlab agency, agence de création web, sites internet, applications et logiciels sur mesure, basée en Martinique (France).',
     'legal.s1.name': 'Responsable de publication',
-    'legal.s1.name.val': 'Ursulet Maric',
+    'legal.s1.name.val': 'Maric',
     'legal.s1.address': 'Adresse postale',
     'legal.siren': 'Numéro SIREN',
     'legal.siret': 'Numéro SIRET',
@@ -173,7 +173,7 @@ export const messages: Record<Lang, Record<string, string>> = {
       'L’ensemble du site (textes, visuels, charte graphique, code) est protégé par le droit d’auteur. Toute reproduction ou utilisation sans autorisation écrite de Madinlab agency est interdite. Les marques et logos cités restent la propriété de leurs titulaires.',
     'legal.s5.title': 'Politique de confidentialité (RGPD)',
     'legal.s5.p1':
-      'Le responsable du traitement est Ursulet Maric, agissant pour Madinlab agency (contact : contact@madinlabagency.com, 0696 52 23 47).',
+      'Le responsable du traitement est Maric, agissant pour Madinlab agency (contact : contact@madinlabagency.com, 0696 52 23 47).',
     'legal.s5.p2':
       'Données concernées : identité, coordonnées (e-mail, téléphone), description de projet et préférences indiquées dans le formulaire de devis. Finalités : répondre à votre demande, chiffrer une offre et assurer le suivi commercial. Nous ne revendons pas vos données et n’envoyons pas de newsletter sans consentement distinct.',
     'legal.s5.p3':
@@ -316,7 +316,7 @@ export const messages: Record<Lang, Record<string, string>> = {
     'work.tag': '[ Work ]',
     'work.h2': 'Quality shows <em>on the client’s site.</em>',
     'work.founder.aria': 'Madinlab founder',
-    'work.founder.alt': 'Portrait of Ursulet Maric, founder of Madinlab',
+    'work.founder.alt': 'Portrait of Maric, founder of Madinlab',
     'work.founder.role': 'Founder & developer, Madinlab',
     'work.founder.note': 'Every project is crafted with care and ready to perform.',
     'work.p1.cat': '01 Tourism',
@@ -417,7 +417,7 @@ export const messages: Record<Lang, Record<string, string>> = {
     'legal.s1.body':
       'The madinlab-agency website is published by Madinlab agency, a custom web, app and business software studio based in Martinique (France).',
     'legal.s1.name': 'Publication director',
-    'legal.s1.name.val': 'Ursulet Maric',
+    'legal.s1.name.val': 'Maric',
     'legal.s1.address': 'Postal address',
     'legal.siren': 'SIREN number',
     'legal.siret': 'SIRET number',
@@ -437,7 +437,7 @@ export const messages: Record<Lang, Record<string, string>> = {
       'All site content (text, visuals, branding, code) is protected by copyright. Any reproduction or use without written permission from Madinlab agency is prohibited. Third-party trademarks remain the property of their owners.',
     'legal.s5.title': 'Privacy policy (GDPR)',
     'legal.s5.p1':
-      'Data controller: Ursulet Maric, acting for Madinlab agency (contact@madinlabagency.com, 0696 52 23 47).',
+      'Data controller: Maric, acting for Madinlab agency (contact@madinlabagency.com, 0696 52 23 47).',
     'legal.s5.p2':
       'Data: identity, contact details (email, phone), project description and choices in the quote form. Purposes: reply to your request, prepare a quote and follow up commercially. We do not sell your data or send newsletters without separate consent.',
     'legal.s5.p3':
@@ -577,7 +577,7 @@ export const messages: Record<Lang, Record<string, string>> = {
     'work.tag': '[ Proyectos ]',
     'work.h2': 'El nivel se juzga <em>en el sitio del cliente.</em>',
     'work.founder.aria': 'Fundador de Madinlab',
-    'work.founder.alt': 'Retrato de Ursulet Maric, fundador de Madinlab',
+    'work.founder.alt': 'Retrato de Maric, fundador de Madinlab',
     'work.founder.role': 'Fundador y desarrollador, Madinlab',
     'work.founder.note': 'Cada proyecto se diseña con cuidado y listo para rendir.',
     'work.p1.cat': '01 Turismo',
@@ -678,7 +678,7 @@ export const messages: Record<Lang, Record<string, string>> = {
     'legal.s1.body':
       'El sitio madinlab-agency está editado por Madinlab agency, agencia de creación web, sitios, aplicaciones y software a medida, con sede en Martinica (Francia).',
     'legal.s1.name': 'Director de publicación',
-    'legal.s1.name.val': 'Ursulet Maric',
+    'legal.s1.name.val': 'Maric',
     'legal.s1.address': 'Dirección postal',
     'legal.siren': 'Número SIREN',
     'legal.siret': 'Número SIRET',
@@ -698,7 +698,7 @@ export const messages: Record<Lang, Record<string, string>> = {
       'Todo el contenido del sitio (textos, visuales, identidad, código) está protegido por derechos de autor. Queda prohibida su reproducción o uso sin autorización escrita de Madinlab agency. Las marcas citadas pertenecen a sus titulares.',
     'legal.s5.title': 'Política de privacidad (RGPD)',
     'legal.s5.p1':
-      'Responsable del tratamiento: Ursulet Maric, en nombre de Madinlab agency (contact@madinlabagency.com, 0696 52 23 47).',
+      'Responsable del tratamiento: Maric, en nombre de Madinlab agency (contact@madinlabagency.com, 0696 52 23 47).',
     'legal.s5.p2':
       'Datos: identidad, contacto (correo, teléfono), descripción del proyecto y opciones del formulario. Finalidades: responder, preparar presupuesto y seguimiento comercial. No vendemos sus datos ni enviamos boletines sin consentimiento aparte.',
     'legal.s5.p3':
