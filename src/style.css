@@ -1718,9 +1718,7 @@ h2 em { font-style: italic; }
     padding-bottom: env(safe-area-inset-bottom);
   }
   .hero__logo {
-    width: min(82vw, 360px);
-    transform: scale(1.5);
-    transform-origin: center center;
+    width: min(68vw, 280px);
   }
   .hero__meta {
     left: var(--side);

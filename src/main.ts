@@ -69,6 +69,7 @@ function initIntroTypewriter() {
 
   if (sessionStorage.getItem(INTRO_SEEN_KEY) === '1') {
     intro.remove()
+    resumeBackgroundVideos()
     return
   }
 
@@ -79,6 +80,7 @@ function initIntroTypewriter() {
   const dismissIntro = () => {
     sessionStorage.setItem(INTRO_SEEN_KEY, '1')
     intro.remove()
+    resumeBackgroundVideos()
   }
 
   const playExit = () => {
@@ -120,7 +122,11 @@ function initIntroTypewriter() {
   typeNext()
 }
 
-initIntroTypewriter()
+const backgroundVideoResume = new Set<() => void>()
+
+function resumeBackgroundVideos() {
+  backgroundVideoResume.forEach((attemptPlay) => attemptPlay())
+}
 
 function initAutoplayVideo(video: HTMLVideoElement) {
   video.muted = true
@@ -129,15 +135,24 @@ function initAutoplayVideo(video: HTMLVideoElement) {
   video.setAttribute('muted', '')
   video.setAttribute('playsinline', '')
   video.setAttribute('webkit-playsinline', '')
+  video.setAttribute('x5-playsinline', '')
 
   const attemptPlay = () => {
+    if (video.error) return
+    video.muted = true
+    if (video.readyState < HTMLMediaElement.HAVE_METADATA) {
+      video.load()
+    }
     const playPromise = video.play()
     if (playPromise !== undefined) {
       playPromise.catch(() => {})
     }
   }
 
+  backgroundVideoResume.add(attemptPlay)
+
   attemptPlay()
+  video.addEventListener('loadedmetadata', attemptPlay, { once: true })
   if (video.readyState < HTMLMediaElement.HAVE_CURRENT_DATA) {
     video.addEventListener('loadeddata', attemptPlay, { once: true })
     video.addEventListener('canplay', attemptPlay, { once: true })
@@ -150,7 +165,6 @@ function initAutoplayVideo(video: HTMLVideoElement) {
     if (video.paused) attemptPlay()
   })
 
-  // iOS Safari : parfois besoin d’un second essai après le paint / l’intro
   window.setTimeout(attemptPlay, 400)
   window.setTimeout(attemptPlay, 1500)
 
@@ -160,16 +174,24 @@ function initAutoplayVideo(video: HTMLVideoElement) {
         if (entry.isIntersecting && video.paused) attemptPlay()
       })
     },
-    { threshold: 0.12 },
+    { threshold: 0.01, rootMargin: '20% 0px' },
   )
   observer.observe(video)
 }
 
-if (!reducedMotion) {
+function wireBackgroundVideos() {
+  if (reducedMotion) return
   document.querySelectorAll<HTMLVideoElement>('.hero__video, .contact__video').forEach((video) => {
     initAutoplayVideo(video)
   })
+  const unlock = () => resumeBackgroundVideos()
+  document.addEventListener('touchstart', unlock, { once: true, passive: true })
+  document.addEventListener('pointerdown', unlock, { once: true, passive: true })
 }
+
+wireBackgroundVideos()
+initIntroTypewriter()
+window.setTimeout(resumeBackgroundVideos, 200)
 
 const offres = document.querySelector('#offres')
 const offresBits = offres?.querySelectorAll('.rate, .band__lead, .band__trust')
