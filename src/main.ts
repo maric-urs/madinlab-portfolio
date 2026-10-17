@@ -2,7 +2,13 @@ import './style.css'
 import { initI18n, getIntroSlogan, t } from './i18n'
 import { FORMSUBMIT_ENDPOINT, SITE_CONTACT_EMAIL } from './form-config'
 import { SITE_PHONE_DISPLAY } from './legal-config'
-import { LEGAL_HOST, LEGAL_PUBLISHER_ADDRESS } from './legal-config'
+import {
+  formatSirenDisplay,
+  LEGAL_HOST,
+  LEGAL_PUBLISHER_ADDRESS,
+  LEGAL_SIREN,
+  LEGAL_SIRET,
+} from './legal-config'
 import { applySeoHead } from './seo'
 import { initTextAnimations } from './text-animate'
 
@@ -19,6 +25,18 @@ function applyLegalStatic() {
   document.querySelectorAll<HTMLAnchorElement>('[data-legal="host-url"]').forEach((el) => {
     el.href = LEGAL_HOST.website
     el.textContent = LEGAL_HOST.websiteLabel
+  })
+  document.querySelectorAll<HTMLElement>('[data-legal="siren"]').forEach((el) => {
+    el.textContent = formatSirenDisplay(LEGAL_SIREN)
+  })
+  document.querySelectorAll<HTMLElement>('[data-legal="siret"]').forEach((el) => {
+    if (LEGAL_SIRET) {
+      el.textContent = LEGAL_SIRET
+      el.classList.remove('legal-facts__empty')
+      el.removeAttribute('aria-label')
+    } else {
+      el.closest('.legal-facts__row--siret')?.setAttribute('hidden', '')
+    }
   })
 }
 
