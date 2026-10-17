@@ -37,15 +37,31 @@ if (!window.location.hash) {
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
+const INTRO_SEEN_KEY = 'madinlab-intro-seen'
+
+document.querySelectorAll<HTMLAnchorElement>('[data-skip-intro]').forEach((link) => {
+  link.addEventListener('click', () => {
+    sessionStorage.setItem(INTRO_SEEN_KEY, '1')
+  })
+})
+
 function initIntroTypewriter() {
   const intro = document.querySelector<HTMLElement>('.intro')
   if (!intro) return
+
+  if (sessionStorage.getItem(INTRO_SEEN_KEY) === '1') {
+    intro.remove()
+    return
+  }
 
   const typedEl = intro.querySelector<HTMLElement>('.intro__typed')
   const caret = intro.querySelector<HTMLElement>('.intro__caret')
   const fullText = getIntroSlogan()
 
-  const dismissIntro = () => intro.remove()
+  const dismissIntro = () => {
+    sessionStorage.setItem(INTRO_SEEN_KEY, '1')
+    intro.remove()
+  }
 
   const playExit = () => {
     intro.classList.add('intro--exit')
