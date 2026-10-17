@@ -122,11 +122,52 @@ function initIntroTypewriter() {
 
 initIntroTypewriter()
 
+function initAutoplayVideo(video: HTMLVideoElement) {
+  video.muted = true
+  video.defaultMuted = true
+  video.playsInline = true
+  video.setAttribute('muted', '')
+  video.setAttribute('playsinline', '')
+  video.setAttribute('webkit-playsinline', '')
+
+  const attemptPlay = () => {
+    const playPromise = video.play()
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {})
+    }
+  }
+
+  attemptPlay()
+  if (video.readyState < HTMLMediaElement.HAVE_CURRENT_DATA) {
+    video.addEventListener('loadeddata', attemptPlay, { once: true })
+    video.addEventListener('canplay', attemptPlay, { once: true })
+  }
+
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden && video.paused) attemptPlay()
+  })
+  window.addEventListener('pageshow', () => {
+    if (video.paused) attemptPlay()
+  })
+
+  // iOS Safari : parfois besoin d’un second essai après le paint / l’intro
+  window.setTimeout(attemptPlay, 400)
+  window.setTimeout(attemptPlay, 1500)
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && video.paused) attemptPlay()
+      })
+    },
+    { threshold: 0.12 },
+  )
+  observer.observe(video)
+}
+
 if (!reducedMotion) {
-  const heroVideo = document.querySelector<HTMLVideoElement>('.hero__video')
-  if (heroVideo) heroVideo.play().catch(() => {})
-  document.querySelectorAll<HTMLVideoElement>('.contact__video').forEach((video) => {
-    video.play().catch(() => {})
+  document.querySelectorAll<HTMLVideoElement>('.hero__video, .contact__video').forEach((video) => {
+    initAutoplayVideo(video)
   })
 }
 
