@@ -1,14 +1,20 @@
 /** Coordonnées légales (LCEN / RGPD). Mettre à jour ici si SIREN/SIRET ou adresse postale change. */
 export const LEGAL_PUBLISHER_ADDRESS = 'Fort-de-France, Martinique, France'
 
-/** SIREN (9 chiffres). SIRET à compléter quand l’établissement est validé. */
+/** SIREN (9 chiffres) et SIRET (14 chiffres). */
 export const LEGAL_SIREN = '131679540'
-export const LEGAL_SIRET = ''
+export const LEGAL_SIRET = '13167954000016'
 
 export function formatSirenDisplay(siren: string): string {
   const digits = siren.replace(/\D/g, '')
   if (digits.length !== 9) return siren
   return `${digits.slice(0, 3)} ${digits.slice(3, 6)} ${digits.slice(6, 9)}`
+}
+
+export function formatSiretDisplay(siret: string): string {
+  const digits = siret.replace(/\D/g, '')
+  if (digits.length !== 14) return siret
+  return `${digits.slice(0, 3)} ${digits.slice(3, 6)} ${digits.slice(6, 9)} ${digits.slice(9, 14)}`
 }
 
 export const SITE_PHONE_E164 = '+596696522347'

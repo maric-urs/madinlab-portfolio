@@ -4,6 +4,7 @@ import { FORMSUBMIT_ENDPOINT, SITE_CONTACT_EMAIL } from './form-config'
 import { SITE_PHONE_DISPLAY } from './legal-config'
 import {
   formatSirenDisplay,
+  formatSiretDisplay,
   LEGAL_HOST,
   LEGAL_PUBLISHER_ADDRESS,
   LEGAL_SIREN,
@@ -31,7 +32,7 @@ function applyLegalStatic() {
   })
   document.querySelectorAll<HTMLElement>('[data-legal="siret"]').forEach((el) => {
     if (LEGAL_SIRET) {
-      el.textContent = LEGAL_SIRET
+      el.textContent = formatSiretDisplay(LEGAL_SIRET)
       el.classList.remove('legal-facts__empty')
       el.removeAttribute('aria-label')
     } else {
